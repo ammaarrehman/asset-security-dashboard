@@ -1,0 +1,4 @@
+device_name,device_type,operating_system,owner,endpoint_protection,patch_status,backup_status,last_reviewed,notes
+Mobile Pantry Laptop,Laptop,Windows 11,Food Distribution,Enabled,Overdue,Enabled,2025-01-15,Schedule updates after the next distribution shift.
+Workshop Tablet,Mobile,iPadOS,Programs,Unknown,Up to date,Unknown,,Confirm protection and backup settings with Programs.
+Resource Center Desktop,Desktop,Windows 11,Client Services,Enabled,Up to date,Disabled,2025-01-21,"Verify what needs to be backed up, then test a restore."

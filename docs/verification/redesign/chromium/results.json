@@ -1,0 +1,2092 @@
+{
+  "status": "passed",
+  "executedAt": "2026-11-12T05:28:45.377Z",
+  "engine": "chromium",
+  "version": "153.0.8010.12",
+  "playwright": "1.63.0",
+  "axe": "4.13.0",
+  "fixedDate": "2026-11-11T15:00:00Z",
+  "accessibility": [
+    {
+      "label": "desktop: overview",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 25
+    },
+    {
+      "label": "desktop: inventory",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 25
+    },
+    {
+      "label": "desktop: detail",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 20
+    },
+    {
+      "label": "desktop: editor",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 16
+    },
+    {
+      "label": "desktop: add editor",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 16
+    },
+    {
+      "label": "desktop: validation",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 17
+    },
+    {
+      "label": "desktop: import",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              ".modal-body > p"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".modal-body > p"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "13px",
+          "ratio": 5.2836712357770015
+        }
+      ],
+      "passedRules": 16
+    },
+    {
+      "label": "desktop: import preview",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              "strong"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "strong"
+          ],
+          "foreground": "rgb(53, 84, 65)",
+          "background": "rgb(228, 235, 225)",
+          "fontSize": "13px",
+          "ratio": 6.91927255537328
+        }
+      ],
+      "passedRules": 20
+    },
+    {
+      "label": "desktop: findings",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 24
+    },
+    {
+      "label": "desktop: reset confirmation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              "#_r_b_"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "#_r_b_"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "12px",
+          "ratio": 5.2836712357770015
+        }
+      ],
+      "passedRules": 13
+    },
+    {
+      "label": "laptop: overview",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 25
+    },
+    {
+      "label": "laptop: inventory",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 25
+    },
+    {
+      "label": "laptop: detail",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 21
+    },
+    {
+      "label": "laptop: editor",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 16
+    },
+    {
+      "label": "laptop: add editor",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 17
+    },
+    {
+      "label": "laptop: validation",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 18
+    },
+    {
+      "label": "laptop: import",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 16
+    },
+    {
+      "label": "laptop: import preview",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 20
+    },
+    {
+      "label": "laptop: findings",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 24
+    },
+    {
+      "label": "laptop: reset confirmation",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 13
+    },
+    {
+      "label": "tablet: overview",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 25
+    },
+    {
+      "label": "tablet: inventory",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 25
+    },
+    {
+      "label": "tablet: detail",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 20
+    },
+    {
+      "label": "tablet: editor",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 16
+    },
+    {
+      "label": "tablet: add editor",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 16
+    },
+    {
+      "label": "tablet: validation",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 17
+    },
+    {
+      "label": "tablet: import",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              ".modal-body > p"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".modal-body > p"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "13px",
+          "ratio": 5.2836712357770015
+        }
+      ],
+      "passedRules": 16
+    },
+    {
+      "label": "tablet: import preview",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              ".modal-body > p"
+            ],
+            [
+              "strong"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".modal-body > p"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "13px",
+          "ratio": 5.2836712357770015
+        },
+        {
+          "target": [
+            "strong"
+          ],
+          "foreground": "rgb(53, 84, 65)",
+          "background": "rgb(228, 235, 225)",
+          "fontSize": "13px",
+          "ratio": 6.91927255537328
+        }
+      ],
+      "passedRules": 20
+    },
+    {
+      "label": "tablet: findings",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 24
+    },
+    {
+      "label": "tablet: reset confirmation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              "#_r_b_"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "#_r_b_"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "12px",
+          "ratio": 5.2836712357770015
+        }
+      ],
+      "passedRules": 13
+    },
+    {
+      "label": "mobile: overview",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 25
+    },
+    {
+      "label": "mobile: inventory",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 25
+    },
+    {
+      "label": "mobile: detail",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 21
+    },
+    {
+      "label": "mobile: editor",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 17
+    },
+    {
+      "label": "mobile: add editor",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 17
+    },
+    {
+      "label": "mobile: validation",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 18
+    },
+    {
+      "label": "mobile: import",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              "#_r_9_"
+            ],
+            [
+              ".modal-body > p"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "#_r_9_"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "11px",
+          "ratio": 5.2836712357770015
+        },
+        {
+          "target": [
+            ".modal-body > p"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "13px",
+          "ratio": 5.2836712357770015
+        }
+      ],
+      "passedRules": 16
+    },
+    {
+      "label": "mobile: import preview",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              "#_r_9_"
+            ],
+            [
+              ".modal-body > p"
+            ],
+            [
+              ".import-preview > p"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "#_r_9_"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "11px",
+          "ratio": 5.2836712357770015
+        },
+        {
+          "target": [
+            ".modal-body > p"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "13px",
+          "ratio": 5.2836712357770015
+        },
+        {
+          "target": [
+            ".import-preview > p"
+          ],
+          "foreground": "rgb(53, 84, 65)",
+          "background": "rgb(228, 235, 225)",
+          "fontSize": "13px",
+          "ratio": 6.91927255537328
+        }
+      ],
+      "passedRules": 20
+    },
+    {
+      "label": "mobile: findings",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 24
+    },
+    {
+      "label": "mobile: reset confirmation",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              "#_r_b_"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.3pt (11px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "#_r_b_"
+          ],
+          "foreground": "rgb(100, 102, 96)",
+          "background": "rgb(245, 244, 240)",
+          "fontSize": "11px",
+          "ratio": 5.2836712357770015
+        }
+      ],
+      "passedRules": 13
+    },
+    {
+      "label": "desktop: import error",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+          "targets": [
+            [
+              "li"
+            ]
+          ],
+          "details": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+              "checks": [
+                {
+                  "id": "color-contrast",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "li"
+          ],
+          "foreground": "rgb(123, 48, 41)",
+          "background": "rgb(241, 227, 220)",
+          "fontSize": "13px",
+          "ratio": 7.297047025260212
+        }
+      ],
+      "passedRules": 21
+    },
+    {
+      "label": "desktop: delete confirmation",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 13
+    }
+  ],
+  "layouts": [
+    {
+      "viewport": "desktop",
+      "name": "dashboard",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "desktop",
+      "name": "dashboard-full",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "desktop",
+      "name": "keyboard-navigation",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "desktop",
+      "name": "inventory",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "desktop",
+      "name": "inventory-search",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "desktop",
+      "name": "inventory-empty",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "desktop",
+      "name": "asset-details-scrolled",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 350,
+        "y": 36,
+        "width": 740,
+        "height": 828,
+        "top": 36,
+        "right": 1090,
+        "bottom": 864,
+        "left": 350
+      },
+      "footer": {
+        "x": 351,
+        "y": 786,
+        "width": 738,
+        "height": 77,
+        "top": 786,
+        "right": 1089,
+        "bottom": 863,
+        "left": 351
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "asset-details",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 350,
+        "y": 36,
+        "width": 740,
+        "height": 828,
+        "top": 36,
+        "right": 1090,
+        "bottom": 864,
+        "left": 350
+      },
+      "footer": {
+        "x": 351,
+        "y": 786,
+        "width": 738,
+        "height": 77,
+        "top": 786,
+        "right": 1089,
+        "bottom": 863,
+        "left": 351
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "edit-asset",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 350,
+        "y": 43.25,
+        "width": 740,
+        "height": 813.484375,
+        "top": 43.25,
+        "right": 1090,
+        "bottom": 856.734375,
+        "left": 350
+      },
+      "footer": {
+        "x": 351,
+        "y": 778.734375,
+        "width": 738,
+        "height": 77,
+        "top": 778.734375,
+        "right": 1089,
+        "bottom": 855.734375,
+        "left": 351
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "add-asset",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 350,
+        "y": 43.25,
+        "width": 740,
+        "height": 813.484375,
+        "top": 43.25,
+        "right": 1090,
+        "bottom": 856.734375,
+        "left": 350
+      },
+      "footer": {
+        "x": 351,
+        "y": 778.734375,
+        "width": 738,
+        "height": 77,
+        "top": 778.734375,
+        "right": 1089,
+        "bottom": 855.734375,
+        "left": 351
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "add-validation",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 350,
+        "y": 36,
+        "width": 740,
+        "height": 828,
+        "top": 36,
+        "right": 1090,
+        "bottom": 864,
+        "left": 350
+      },
+      "footer": {
+        "x": 351,
+        "y": 786,
+        "width": 738,
+        "height": 77,
+        "top": 786,
+        "right": 1089,
+        "bottom": 863,
+        "left": 351
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "csv-import",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 470,
+        "y": 237.5,
+        "width": 500,
+        "height": 424.984375,
+        "top": 237.5,
+        "right": 970,
+        "bottom": 662.484375,
+        "left": 470
+      },
+      "footer": {
+        "x": 471,
+        "y": 584.484375,
+        "width": 498,
+        "height": 77,
+        "top": 584.484375,
+        "right": 969,
+        "bottom": 661.484375,
+        "left": 471
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "csv-preview",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 470,
+        "y": 195,
+        "width": 500,
+        "height": 509.984375,
+        "top": 195,
+        "right": 970,
+        "bottom": 704.984375,
+        "left": 470
+      },
+      "footer": {
+        "x": 471,
+        "y": 626.984375,
+        "width": 498,
+        "height": 77,
+        "top": 626.984375,
+        "right": 969,
+        "bottom": 703.984375,
+        "left": 471
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "security-findings",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "desktop",
+      "name": "security-findings-filtered",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "desktop",
+      "name": "reset-confirmation",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "dialog": {
+        "x": 470,
+        "y": 335.8125,
+        "width": 500,
+        "height": 228.359375,
+        "top": 335.8125,
+        "right": 970,
+        "bottom": 564.171875,
+        "left": 470
+      },
+      "footer": {
+        "x": 471,
+        "y": 486.171875,
+        "width": 498,
+        "height": 77,
+        "top": 486.171875,
+        "right": 969,
+        "bottom": 563.171875,
+        "left": 471
+      }
+    },
+    {
+      "viewport": "laptop",
+      "name": "dashboard",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "laptop",
+      "name": "dashboard-full",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "laptop",
+      "name": "keyboard-navigation",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "laptop",
+      "name": "inventory",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "laptop",
+      "name": "inventory-search",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "laptop",
+      "name": "inventory-empty",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "laptop",
+      "name": "asset-details-scrolled",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": {
+        "x": 270,
+        "y": 32,
+        "width": 740,
+        "height": 736,
+        "top": 32,
+        "right": 1010,
+        "bottom": 768,
+        "left": 270
+      },
+      "footer": {
+        "x": 271,
+        "y": 690,
+        "width": 738,
+        "height": 77,
+        "top": 690,
+        "right": 1009,
+        "bottom": 767,
+        "left": 271
+      }
+    },
+    {
+      "viewport": "laptop",
+      "name": "asset-details",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": {
+        "x": 270,
+        "y": 32,
+        "width": 740,
+        "height": 736,
+        "top": 32,
+        "right": 1010,
+        "bottom": 768,
+        "left": 270
+      },
+      "footer": {
+        "x": 271,
+        "y": 690,
+        "width": 738,
+        "height": 77,
+        "top": 690,
+        "right": 1009,
+        "bottom": 767,
+        "left": 271
+      }
+    },
+    {
+      "viewport": "laptop",
+      "name": "edit-asset",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": {
+        "x": 270,
+        "y": 32,
+        "width": 740,
+        "height": 736,
+        "top": 32,
+        "right": 1010,
+        "bottom": 768,
+        "left": 270
+      },
+      "footer": {
+        "x": 271,
+        "y": 690,
+        "width": 738,
+        "height": 77,
+        "top": 690,
+        "right": 1009,
+        "bottom": 767,
+        "left": 271
+      }
+    },
+    {
+      "viewport": "laptop",
+      "name": "add-asset",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": {
+        "x": 270,
+        "y": 32,
+        "width": 740,
+        "height": 736,
+        "top": 32,
+        "right": 1010,
+        "bottom": 768,
+        "left": 270
+      },
+      "footer": {
+        "x": 271,
+        "y": 690,
+        "width": 738,
+        "height": 77,
+        "top": 690,
+        "right": 1009,
+        "bottom": 767,
+        "left": 271
+      }
+    },
+    {
+      "viewport": "laptop",
+      "name": "add-validation",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": {
+        "x": 270,
+        "y": 32,
+        "width": 740,
+        "height": 736,
+        "top": 32,
+        "right": 1010,
+        "bottom": 768,
+        "left": 270
+      },
+      "footer": {
+        "x": 271,
+        "y": 690,
+        "width": 738,
+        "height": 77,
+        "top": 690,
+        "right": 1009,
+        "bottom": 767,
+        "left": 271
+      }
+    },
+    {
+      "viewport": "laptop",
+      "name": "csv-import",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": {
+        "x": 390,
+        "y": 187.5,
+        "width": 500,
+        "height": 424.984375,
+        "top": 187.5,
+        "right": 890,
+        "bottom": 612.484375,
+        "left": 390
+      },
+      "footer": {
+        "x": 391,
+        "y": 534.484375,
+        "width": 498,
+        "height": 77,
+        "top": 534.484375,
+        "right": 889,
+        "bottom": 611.484375,
+        "left": 391
+      }
+    },
+    {
+      "viewport": "laptop",
+      "name": "csv-preview",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "tableWidth": 1184,
+      "tableScrollWidth": 1184,
+      "dialog": {
+        "x": 390,
+        "y": 145,
+        "width": 500,
+        "height": 509.984375,
+        "top": 145,
+        "right": 890,
+        "bottom": 654.984375,
+        "left": 390
+      },
+      "footer": {
+        "x": 391,
+        "y": 576.984375,
+        "width": 498,
+        "height": 77,
+        "top": 576.984375,
+        "right": 889,
+        "bottom": 653.984375,
+        "left": 391
+      }
+    },
+    {
+      "viewport": "laptop",
+      "name": "security-findings",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "laptop",
+      "name": "security-findings-filtered",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "laptop",
+      "name": "reset-confirmation",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "dialog": {
+        "x": 390,
+        "y": 285.8125,
+        "width": 500,
+        "height": 228.359375,
+        "top": 285.8125,
+        "right": 890,
+        "bottom": 514.171875,
+        "left": 390
+      },
+      "footer": {
+        "x": 391,
+        "y": 436.171875,
+        "width": 498,
+        "height": 77,
+        "top": 436.171875,
+        "right": 889,
+        "bottom": 513.171875,
+        "left": 391
+      }
+    },
+    {
+      "viewport": "tablet",
+      "name": "dashboard",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "tablet",
+      "name": "dashboard-full",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "tablet",
+      "name": "keyboard-navigation",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "tablet",
+      "name": "inventory",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "tablet",
+      "name": "inventory-search",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "tablet",
+      "name": "inventory-empty",
+      "width": 768,
+      "scrollWidth": 768,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "tablet",
+      "name": "asset-details",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": {
+        "x": 16,
+        "y": 86.21875,
+        "width": 736,
+        "height": 851.546875,
+        "top": 86.21875,
+        "right": 752,
+        "bottom": 937.765625,
+        "left": 16
+      },
+      "footer": {
+        "x": 17,
+        "y": 859.765625,
+        "width": 734,
+        "height": 77,
+        "top": 859.765625,
+        "right": 751,
+        "bottom": 936.765625,
+        "left": 17
+      }
+    },
+    {
+      "viewport": "tablet",
+      "name": "edit-asset",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": {
+        "x": 16,
+        "y": 105.25,
+        "width": 736,
+        "height": 813.484375,
+        "top": 105.25,
+        "right": 752,
+        "bottom": 918.734375,
+        "left": 16
+      },
+      "footer": {
+        "x": 17,
+        "y": 840.734375,
+        "width": 734,
+        "height": 77,
+        "top": 840.734375,
+        "right": 751,
+        "bottom": 917.734375,
+        "left": 17
+      }
+    },
+    {
+      "viewport": "tablet",
+      "name": "add-asset",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": {
+        "x": 16,
+        "y": 105.25,
+        "width": 736,
+        "height": 813.484375,
+        "top": 105.25,
+        "right": 752,
+        "bottom": 918.734375,
+        "left": 16
+      },
+      "footer": {
+        "x": 17,
+        "y": 840.734375,
+        "width": 734,
+        "height": 77,
+        "top": 840.734375,
+        "right": 751,
+        "bottom": 917.734375,
+        "left": 17
+      }
+    },
+    {
+      "viewport": "tablet",
+      "name": "add-validation",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": {
+        "x": 16,
+        "y": 92.75,
+        "width": 736,
+        "height": 838.484375,
+        "top": 92.75,
+        "right": 752,
+        "bottom": 931.234375,
+        "left": 16
+      },
+      "footer": {
+        "x": 17,
+        "y": 853.234375,
+        "width": 734,
+        "height": 77,
+        "top": 853.234375,
+        "right": 751,
+        "bottom": 930.234375,
+        "left": 17
+      }
+    },
+    {
+      "viewport": "tablet",
+      "name": "csv-import",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": {
+        "x": 134,
+        "y": 299.5,
+        "width": 500,
+        "height": 424.984375,
+        "top": 299.5,
+        "right": 634,
+        "bottom": 724.484375,
+        "left": 134
+      },
+      "footer": {
+        "x": 135,
+        "y": 646.484375,
+        "width": 498,
+        "height": 77,
+        "top": 646.484375,
+        "right": 633,
+        "bottom": 723.484375,
+        "left": 135
+      }
+    },
+    {
+      "viewport": "tablet",
+      "name": "csv-preview",
+      "width": 768,
+      "scrollWidth": 768,
+      "tableWidth": 720,
+      "tableScrollWidth": 720,
+      "dialog": {
+        "x": 134,
+        "y": 257,
+        "width": 500,
+        "height": 509.984375,
+        "top": 257,
+        "right": 634,
+        "bottom": 766.984375,
+        "left": 134
+      },
+      "footer": {
+        "x": 135,
+        "y": 688.984375,
+        "width": 498,
+        "height": 77,
+        "top": 688.984375,
+        "right": 633,
+        "bottom": 765.984375,
+        "left": 135
+      }
+    },
+    {
+      "viewport": "tablet",
+      "name": "security-findings",
+      "width": 768,
+      "scrollWidth": 768,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "tablet",
+      "name": "security-findings-filtered",
+      "width": 768,
+      "scrollWidth": 768,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "tablet",
+      "name": "reset-confirmation",
+      "width": 768,
+      "scrollWidth": 768,
+      "dialog": {
+        "x": 134,
+        "y": 397.8125,
+        "width": 500,
+        "height": 228.359375,
+        "top": 397.8125,
+        "right": 634,
+        "bottom": 626.171875,
+        "left": 134
+      },
+      "footer": {
+        "x": 135,
+        "y": 548.171875,
+        "width": 498,
+        "height": 77,
+        "top": 548.171875,
+        "right": 633,
+        "bottom": 625.171875,
+        "left": 135
+      }
+    },
+    {
+      "viewport": "mobile",
+      "name": "dashboard",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "mobile",
+      "name": "dashboard-full",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "mobile",
+      "name": "keyboard-navigation",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "mobile",
+      "name": "inventory",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "mobile",
+      "name": "inventory-search",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "mobile",
+      "name": "inventory-empty",
+      "width": 390,
+      "scrollWidth": 390,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "mobile",
+      "name": "asset-details-scrolled",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": {
+        "x": 12,
+        "y": 25.3125,
+        "width": 366,
+        "height": 793.359375,
+        "top": 25.3125,
+        "right": 378,
+        "bottom": 818.671875,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 746.671875,
+        "width": 364,
+        "height": 71,
+        "top": 746.671875,
+        "right": 377,
+        "bottom": 817.671875,
+        "left": 13
+      }
+    },
+    {
+      "viewport": "mobile",
+      "name": "asset-details",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": {
+        "x": 12,
+        "y": 25.3125,
+        "width": 366,
+        "height": 793.359375,
+        "top": 25.3125,
+        "right": 378,
+        "bottom": 818.671875,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 746.671875,
+        "width": 364,
+        "height": 71,
+        "top": 746.671875,
+        "right": 377,
+        "bottom": 817.671875,
+        "left": 13
+      }
+    },
+    {
+      "viewport": "mobile",
+      "name": "edit-asset",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": {
+        "x": 12,
+        "y": 25.3125,
+        "width": 366,
+        "height": 793.359375,
+        "top": 25.3125,
+        "right": 378,
+        "bottom": 818.671875,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 746.671875,
+        "width": 364,
+        "height": 71,
+        "top": 746.671875,
+        "right": 377,
+        "bottom": 817.671875,
+        "left": 13
+      }
+    },
+    {
+      "viewport": "mobile",
+      "name": "add-asset",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": {
+        "x": 12,
+        "y": 25.3125,
+        "width": 366,
+        "height": 793.359375,
+        "top": 25.3125,
+        "right": 378,
+        "bottom": 818.671875,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 746.671875,
+        "width": 364,
+        "height": 71,
+        "top": 746.671875,
+        "right": 377,
+        "bottom": 817.671875,
+        "left": 13
+      }
+    },
+    {
+      "viewport": "mobile",
+      "name": "add-validation",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": {
+        "x": 12,
+        "y": 25.3125,
+        "width": 366,
+        "height": 793.359375,
+        "top": 25.3125,
+        "right": 378,
+        "bottom": 818.671875,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 746.671875,
+        "width": 364,
+        "height": 71,
+        "top": 746.671875,
+        "right": 377,
+        "bottom": 817.671875,
+        "left": 13
+      }
+    },
+    {
+      "viewport": "mobile",
+      "name": "csv-import",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": {
+        "x": 12,
+        "y": 208.15625,
+        "width": 366,
+        "height": 427.6875,
+        "top": 208.15625,
+        "right": 378,
+        "bottom": 635.84375,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 563.84375,
+        "width": 364,
+        "height": 71,
+        "top": 563.84375,
+        "right": 377,
+        "bottom": 634.84375,
+        "left": 13
+      }
+    },
+    {
+      "viewport": "mobile",
+      "name": "csv-preview",
+      "width": 390,
+      "scrollWidth": 390,
+      "tableWidth": 354,
+      "tableScrollWidth": 354,
+      "dialog": {
+        "x": 12,
+        "y": 155.90625,
+        "width": 366,
+        "height": 532.1875,
+        "top": 155.90625,
+        "right": 378,
+        "bottom": 688.09375,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 616.09375,
+        "width": 364,
+        "height": 71,
+        "top": 616.09375,
+        "right": 377,
+        "bottom": 687.09375,
+        "left": 13
+      }
+    },
+    {
+      "viewport": "mobile",
+      "name": "security-findings",
+      "width": 390,
+      "scrollWidth": 390,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "mobile",
+      "name": "security-findings-filtered",
+      "width": 390,
+      "scrollWidth": 390,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "mobile",
+      "name": "reset-confirmation",
+      "width": 390,
+      "scrollWidth": 390,
+      "dialog": {
+        "x": 12,
+        "y": 320.609375,
+        "width": 366,
+        "height": 202.78125,
+        "top": 320.609375,
+        "right": 378,
+        "bottom": 523.390625,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 451.390625,
+        "width": 364,
+        "height": 71,
+        "top": 451.390625,
+        "right": 377,
+        "bottom": 522.390625,
+        "left": 13
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "csv-invalid",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 470,
+        "y": 187.25,
+        "width": 500,
+        "height": 525.484375,
+        "top": 187.25,
+        "right": 970,
+        "bottom": 712.734375,
+        "left": 470
+      },
+      "footer": {
+        "x": 471,
+        "y": 634.734375,
+        "width": 498,
+        "height": 77,
+        "top": 634.734375,
+        "right": 969,
+        "bottom": 711.734375,
+        "left": 471
+      }
+    },
+    {
+      "viewport": "desktop",
+      "name": "delete-confirmation",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "tableWidth": 1248,
+      "tableScrollWidth": 1248,
+      "dialog": {
+        "x": 470,
+        "y": 345.40625,
+        "width": 500,
+        "height": 209.171875,
+        "top": 345.40625,
+        "right": 970,
+        "bottom": 554.578125,
+        "left": 470
+      },
+      "footer": {
+        "x": 404,
+        "y": 476.578125,
+        "width": 498,
+        "height": 77,
+        "top": 476.578125,
+        "right": 902,
+        "bottom": 553.578125,
+        "left": 404
+      }
+    },
+    {
+      "viewport": "narrow",
+      "name": "inventory",
+      "width": 320,
+      "scrollWidth": 320,
+      "tableWidth": 284,
+      "tableScrollWidth": 284,
+      "dialog": null,
+      "footer": null
+    },
+    {
+      "viewport": "narrow",
+      "name": "add-asset",
+      "width": 320,
+      "scrollWidth": 320,
+      "tableWidth": 284,
+      "tableScrollWidth": 284,
+      "dialog": {
+        "x": 12,
+        "y": 23.40625,
+        "width": 296,
+        "height": 733.1875,
+        "top": 23.40625,
+        "right": 308,
+        "bottom": 756.59375,
+        "left": 12
+      },
+      "footer": {
+        "x": 13,
+        "y": 684.59375,
+        "width": 294,
+        "height": 71,
+        "top": 684.59375,
+        "right": 307,
+        "bottom": 755.59375,
+        "left": 13
+      }
+    }
+  ],
+  "workflows": [
+    "CRUD and findings updates",
+    "search, status/category filters",
+    "keyboard navigation, modal focus containment, Escape, validation and focus restoration",
+    "CSV atomic failure, preview, import, export and formula round-trip",
+    "refresh persistence and reset",
+    "320px layout and scrolling editor with visible actions"
+  ],
+  "errors": [],
+  "gallery": {
+    "dashboard-desktop.png": "d5a62c757503853074afbf32f1d484f533d1f6849ba4f3d8013c762dcf838483",
+    "dashboard-laptop.png": "77a02cc6117695e6854b7877af9b67165e2448cc9edf21673a966f34ba59006b",
+    "inventory-desktop.png": "7b2294e8f6b1f71678771cf0fbee1ad7ff2b8f77c6552bf4726faf1b50b9c99e",
+    "asset-details.png": "e12006c1dcbec8b7e55e2ed00a83d8345ad3046c8f872bd2776230e8e81ca8ad",
+    "security-findings.png": "cf2ea3f3eb1412ac0fff8a91f0d64d24e25fbb307bad27c5087e706d9b118a24",
+    "edit-asset-desktop.png": "423c0a8e66afa59c545654d243d9236d56d17c92e44d639841d8c9009d246bf0",
+    "dashboard-tablet.png": "1bd5703021f91a0136daac2d2ba48b8a4e9edd1b1b708acb2ab620c38666f9e9",
+    "dashboard-mobile.png": "fbd014a6b2da3bd4e3da671231662b05b9a2fe1c48c1f3219372326db2fc6631",
+    "inventory-mobile.png": "146f5d2b61d9c9380fd66a66206686a47b2fa9f7fa79e05fecff5a0ed38dadb9",
+    "edit-asset-mobile.png": "bd2550c73dd058df5e69cba2743cbe51c07656a34691d2b418f394e3ee3e444e",
+    "visual-review.png": "2a897ac4b801f94dc3ffdcb4656ab439dcea0f93f0dac9ff1063c5764a37d041"
+  },
+  "productionHtmlSha256": "a05b37783c30aade68f88bc746e2df77db2f6035bff443cce736f86b130ef874"
+}
