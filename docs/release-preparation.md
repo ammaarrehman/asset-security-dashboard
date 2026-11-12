@@ -1,6 +1,6 @@
 # Publication preparation
 
-Status updated 2026-11-12: **Publication authorized by the owner; release verification in progress**. See the [redesign review](verification/redesign/README.md) for current Chromium results, accessibility diagnostics, and refreshed screenshots. The dependency audit and prior-interface results below are historical. Playwright and axe-core have since been added as pinned development tools. The owner explicitly authorized the public personal repository and GitHub Pages deployment on 2026-11-12.
+Status updated 2026-11-12: **Published publicly; live deployment verification passed**. See the [redesign review](verification/redesign/README.md) for current Chromium results, accessibility diagnostics, and refreshed screenshots. The dependency audit and prior-interface results below are historical. Playwright and axe-core have since been added as pinned development tools. The owner explicitly authorized the public personal repository and GitHub Pages deployment on 2026-11-12.
 
 The intended personal repository is `ammaarrehman/asset-security-dashboard`.
 
@@ -57,4 +57,4 @@ Browser tests used the actual rebuilt `dist/` through Vite preview on loopback a
 
 Effective Git author and committer: `Ammaar Rehman <ammaar2rehman@gmail.com>`. Configuration origins and scopes were inspected. The conditional work identity does not apply to this project.
 
-The earlier preparation stopped before Git initialization or publication. The owner has now authorized initialization, commits, public repository creation, pushes, and GitHub Pages deployment. Current publication evidence will be recorded in `docs/verification/publication/README.md`.
+The earlier preparation stopped before Git initialization or publication. The owner has now authorized initialization, commits, public repository creation, pushes, and GitHub Pages deployment. Current publication evidence is recorded in [the public release verification](verification/publication/README.md). The first Pages deployment succeeded and the actual public site passed browser verification; the README includes the verified live URL.

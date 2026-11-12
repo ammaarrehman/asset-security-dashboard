@@ -1,0 +1,95 @@
+{
+  "executedAt": "2026-11-12T06:45:13.657Z",
+  "site": "https://ammaarrehman.github.io/asset-security-dashboard/",
+  "repo": "https://github.com/ammaarrehman/asset-security-dashboard",
+  "assets": [
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/favicon.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "sha256": "e21f85ff661fa0503b702c3a903c7576faaaed4e86e53f30fdb966ebdcd8e5cf"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/index-BpNYWyid.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "dddcead4879354c29bf2953e2f17835453b9116a70d40b386344079467b9af7f"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/index-1yPBRsH4.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "sha256": "b770ca36df16548632714e20b3305aa1dea948a5ebd1eeed3a0e726afb311fa8"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/sample-assets.csv",
+      "status": 200,
+      "contentType": "text/csv; charset=utf-8",
+      "sha256": "841da9d652b8fde523d70a9b007f893145e3ffb0e60674f688d489239430aaa6"
+    }
+  ],
+  "readmeImages": [
+    {
+      "alt": "Dashboard with the 18-device demo, status totals, device and finding charts, and inventory preview",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/dashboard-desktop.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "alt": "Desktop inventory showing seven Windows devices, their owners, and security statuses",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/inventory-desktop.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "alt": "Overview at 1280 by 800 with the summary strip and two charts",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/dashboard-laptop.png",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "alt": "Asset details for Outreach Laptop 03 showing the overdue patch finding and recommended action",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/asset-details.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "alt": "Desktop asset editor with grouped identity, recorded controls, and review fields",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/edit-asset-desktop.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "alt": "Security findings with recorded gaps, unknown information, and recommended actions",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/security-findings.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "alt": "Tablet dashboard with top navigation, charts, and all inventory columns visible",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/dashboard-tablet.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "alt": "Dashboard with mobile navigation, status totals, charts, and inventory preview",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/dashboard-mobile.png",
+      "width": 390,
+      "height": 1759
+    },
+    {
+      "alt": "Mobile inventory with device names and security status side by side",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/inventory-mobile.png",
+      "width": 390,
+      "height": 1181
+    },
+    {
+      "alt": "Mobile edit form with visible cancel and save buttons",
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/edit-asset-mobile.png",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

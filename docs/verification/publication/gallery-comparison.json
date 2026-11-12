@@ -1,0 +1,62 @@
+[
+  {
+    "screenshot": "dashboard-desktop.png",
+    "liveSha256": "d5a62c757503853074afbf32f1d484f533d1f6849ba4f3d8013c762dcf838483",
+    "gallerySha256": "d5a62c757503853074afbf32f1d484f533d1f6849ba4f3d8013c762dcf838483",
+    "identical": true
+  },
+  {
+    "screenshot": "dashboard-laptop.png",
+    "liveSha256": "77a02cc6117695e6854b7877af9b67165e2448cc9edf21673a966f34ba59006b",
+    "gallerySha256": "77a02cc6117695e6854b7877af9b67165e2448cc9edf21673a966f34ba59006b",
+    "identical": true
+  },
+  {
+    "screenshot": "inventory-desktop.png",
+    "liveSha256": "7b2294e8f6b1f71678771cf0fbee1ad7ff2b8f77c6552bf4726faf1b50b9c99e",
+    "gallerySha256": "7b2294e8f6b1f71678771cf0fbee1ad7ff2b8f77c6552bf4726faf1b50b9c99e",
+    "identical": true
+  },
+  {
+    "screenshot": "asset-details.png",
+    "liveSha256": "4a30b4bf827d80e6af3ffa89035330cf7de062cac64877e7cbfddcbb60841ae3",
+    "gallerySha256": "e12006c1dcbec8b7e55e2ed00a83d8345ad3046c8f872bd2776230e8e81ca8ad",
+    "identical": false
+  },
+  {
+    "screenshot": "security-findings.png",
+    "liveSha256": "cf2ea3f3eb1412ac0fff8a91f0d64d24e25fbb307bad27c5087e706d9b118a24",
+    "gallerySha256": "cf2ea3f3eb1412ac0fff8a91f0d64d24e25fbb307bad27c5087e706d9b118a24",
+    "identical": true
+  },
+  {
+    "screenshot": "edit-asset-desktop.png",
+    "liveSha256": "423c0a8e66afa59c545654d243d9236d56d17c92e44d639841d8c9009d246bf0",
+    "gallerySha256": "423c0a8e66afa59c545654d243d9236d56d17c92e44d639841d8c9009d246bf0",
+    "identical": true
+  },
+  {
+    "screenshot": "dashboard-tablet.png",
+    "liveSha256": "1bd5703021f91a0136daac2d2ba48b8a4e9edd1b1b708acb2ab620c38666f9e9",
+    "gallerySha256": "1bd5703021f91a0136daac2d2ba48b8a4e9edd1b1b708acb2ab620c38666f9e9",
+    "identical": true
+  },
+  {
+    "screenshot": "dashboard-mobile.png",
+    "liveSha256": "fbd014a6b2da3bd4e3da671231662b05b9a2fe1c48c1f3219372326db2fc6631",
+    "gallerySha256": "fbd014a6b2da3bd4e3da671231662b05b9a2fe1c48c1f3219372326db2fc6631",
+    "identical": true
+  },
+  {
+    "screenshot": "inventory-mobile.png",
+    "liveSha256": "146f5d2b61d9c9380fd66a66206686a47b2fa9f7fa79e05fecff5a0ed38dadb9",
+    "gallerySha256": "146f5d2b61d9c9380fd66a66206686a47b2fa9f7fa79e05fecff5a0ed38dadb9",
+    "identical": true
+  },
+  {
+    "screenshot": "edit-asset-mobile.png",
+    "liveSha256": "bd2550c73dd058df5e69cba2743cbe51c07656a34691d2b418f394e3ee3e444e",
+    "gallerySha256": "bd2550c73dd058df5e69cba2743cbe51c07656a34691d2b418f394e3ee3e444e",
+    "identical": true
+  }
+]

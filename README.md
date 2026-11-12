@@ -4,6 +4,10 @@ A browser-based asset inventory for small nonprofits. Track device ownership, en
 
 Built as a Cyber Ready Clinic capstone. The app opens with 18 fictional nonprofit devices. [5½-minute presentation and demo outline](docs/capstone-outline.md)
 
+**[Live demo](https://ammaarrehman.github.io/asset-security-dashboard/)** · [Source code](https://github.com/ammaarrehman/asset-security-dashboard)
+
+The public demo was verified in Chromium on 12 November 2026, including inventory editing, CSV workflows, refresh persistence, and mobile layouts. [Publication verification](docs/verification/publication/README.md)
+
 ## Screenshots
 
 Actual Chromium captures of the redesigned interface, using fictional demo devices and a fixed review date of 11 November 2026. See the [browser and accessibility review](docs/verification/redesign/README.md) for results and coverage.
@@ -95,6 +99,16 @@ Vitest covers findings, status classification, CSV validation and export safety,
 On macOS, `npm run qa:visual` builds the production app and uses Playwright Chromium to check 1440×900, 1280×800, 768×1024, and 390×844 layouts, keyboard interaction, inventory workflows, CSV import/export, and refresh persistence. It runs axe-core accessibility scans, captures real browser screenshots, and regenerates the gallery, contact sheet, and ZIP. Playwright and axe-core are pinned development dependencies; the command downloads Chromium if it is missing. The app is loaded through local request interception at the configured base path, so no listening server or deployment is needed. A fresh isolated browser profile keeps existing browser records untouched.
 
 Failures produce a nonzero exit status and a [machine-readable report](docs/verification/redesign/chromium/results.json); the gallery is refreshed only after browser assertions pass. Inspect the generated images after each run. Automated checks do not establish complete accessibility conformance or replace assistive-technology testing.
+
+GitHub Actions runs a clean install, lint, tests, TypeScript checks, and the production build on every push to `main`, then deploys `dist/` to GitHub Pages. The workflow also supports manual dispatch and serializes deployments. [Deployment runs](https://github.com/ammaarrehman/asset-security-dashboard/actions/workflows/deploy-pages.yml)
+
+To run the same browser suite against the public deployment without changing the screenshot gallery:
+
+```sh
+ASSET_QA_URL=https://ammaarrehman.github.io/asset-security-dashboard/ \
+ASSET_QA_OUTPUT=/tmp/asset-security-live-qa \
+node scripts/verify-browser.mjs
+```
 
 ## License
 
