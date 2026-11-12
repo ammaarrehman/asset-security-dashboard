@@ -8,6 +8,17 @@ Built as a Cyber Ready Clinic capstone. The app opens with 18 fictional nonprofi
 
 The public demo was verified in Chromium on 12 November 2026, including inventory editing, CSV workflows, refresh persistence, and mobile layouts. [Publication verification](docs/verification/publication/README.md)
 
+## Capstone Presentation
+
+Explore the Cyber Ready Clinic capstone through a six-slide presentation and a timed presenter guide, including a live demonstration. The materials use fictional nonprofit data and explain the prototype's scope and limitations.
+
+- [Download the PowerPoint](https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone.pptx)
+- [Read the presenter guide](docs/presentation/Presenter_Guide.md)
+- [View the slide preview](docs/presentation/Slides_Preview.png)
+- [Open the live application](https://ammaarrehman.github.io/asset-security-dashboard/)
+
+The [presentation kit](docs/presentation/README.md) includes a live-demo QR code. The original [capstone outline](docs/capstone-outline.md) remains available. See [future improvement ideas](docs/future-improvements.md) for optional work beyond this presentation.
+
 ## Screenshots
 
 Actual Chromium captures of the redesigned interface, using fictional demo devices and a fixed review date of 11 November 2026. See the [browser and accessibility review](docs/verification/redesign/README.md) for results and coverage.
