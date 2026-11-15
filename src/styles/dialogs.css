@@ -1,0 +1,81 @@
+/* Dialogs: asset details, editor, CSV import, and confirmations. */
+.modal { position: fixed; inset: 0; margin: auto; padding: 0; width: min(500px, calc(100% - 32px)); max-width: none; max-height: min(92dvh, 920px); overflow: hidden; background: var(--grain), var(--panel); color: var(--text); border: 1px solid var(--line-2); border-radius: var(--radius); box-shadow: 0 24px 80px rgb(0 0 0 / .55); }
+.modal[open], .modal > form { display: flex; flex-direction: column; min-height: 0; }
+.modal[open] { animation: modal-in .26s var(--ease) both; }
+.modal-wide { width: min(760px, calc(100% - 32px)); }
+.modal::backdrop { background: rgb(4 8 12 / .74); animation: fade-in .22s ease both; }
+.modal-header { display: flex; flex: none; align-items: flex-start; gap: 14px; padding: 22px 24px 20px; background: var(--hatch); }
+.modal-header > .device-icon { width: 40px; height: 40px; margin-top: 2px; }
+.modal-title { flex: 1; min-width: 0; }
+.modal-header h2 { font-size: 24px; line-height: 1.2; letter-spacing: -.018em; overflow-wrap: anywhere; }
+.modal-header p { margin-top: 6px; color: var(--text-2); font-size: 14px; line-height: 1.55; }
+.modal-body { min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 22px 24px 26px; border-top: 1px solid var(--line-2); scrollbar-color: var(--line-2) transparent; }
+.modal-body:focus-visible { outline-offset: -3px; }
+.modal-footer { display: flex; flex: none; justify-content: flex-end; align-items: center; gap: 10px; padding: 14px 24px; border-top: 1px solid var(--line); background: var(--bg-deep); }
+.detail-footer { justify-content: space-between; }
+
+.editor-body { display: grid; gap: 22px; }
+.form-section { min-width: 0; }
+.form-section legend { float: left; width: 100%; padding: 0; margin-bottom: 13px; color: var(--signal); font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.form-section + .form-section { padding-top: 20px; border-top: 1px dashed var(--line-2); }
+.form-grid { clear: both; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px; }
+.control-fields { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.full-width { grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.field label { color: var(--text-2); font-size: 13.5px; font-weight: 500; }
+.field :is(input, select, textarea) { width: 100%; min-height: 44px; padding: 9px 11px; border: 1px solid var(--control); border-radius: var(--radius); background: var(--bg-deep); color: var(--text); font-size: 14.5px; transition: border-color .16s; }
+.field :is(input, select, textarea):hover { border-color: var(--text-2); }
+.field textarea { resize: vertical; }
+.field input[type="file"] { padding: 8px; font-size: 13.5px; color: var(--text-2); }
+.field input::file-selector-button { margin-right: 12px; padding: 5px 11px; border: 1px solid var(--line-2); border-radius: 3px; background: var(--surface); color: var(--text); font-weight: 500; cursor: pointer; }
+.field [aria-invalid="true"] { border-color: var(--danger); }
+.field-error { color: var(--danger); font-size: 13.5px; }
+
+.detail-body { display: grid; gap: 24px; }
+.detail-summary { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; }
+.detail-count { color: var(--text-3); font-size: 13.5px; }
+.detail-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 20px; }
+.detail-grid div { min-width: 0; overflow-wrap: anywhere; }
+.detail-grid dt { color: var(--text-3); font: 12px var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+.detail-grid dd { margin-top: 6px; font-size: 15px; }
+.detail-body section > h3 { margin-bottom: 12px; font-size: 15px; font-weight: 600; }
+.controls-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.control-tile { padding: 12px 14px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); }
+.control-tile dd { display: flex; align-items: center; gap: 9px; font-weight: 500; }
+.control-tile.gap { border-color: rgb(216 170 100 / .5); }
+.control-tile.unknown { border-style: dashed; border-color: rgb(163 173 192 / .5); }
+.detail-inspection { padding: 18px 18px 20px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--dots), var(--bg-deep); }
+.detail-findings li + li { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+.detail-finding-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 12px; }
+.detail-finding-head h4 { font-size: 17px; letter-spacing: -.01em; }
+.detail-findings .finding-copy { gap: 14px 22px; }
+.detail-clear { display: flex; align-items: flex-start; gap: 9px; color: var(--text-2); font-size: 14px; }
+.detail-clear svg { margin-top: 2px; color: var(--signal); }
+.asset-notes { white-space: pre-wrap; overflow-wrap: anywhere; color: var(--text-2); font-size: 14px; }
+
+.import-body { display: grid; gap: 16px; color: var(--text-2); font-size: 14px; }
+.import-body a { justify-self: start; min-height: 36px; color: var(--signal); }
+.form-alert, .import-preview { padding: 12px 14px; border: 1px solid rgb(224 139 128 / .5); border-radius: var(--radius); background: var(--danger-wash); color: #f8c2bb; overflow-wrap: anywhere; }
+.form-alert strong, .import-preview strong { color: var(--text); font-weight: 600; }
+.form-alert ul { margin-top: 4px; padding-left: 18px; list-style: disc; }
+.import-preview { border-color: rgb(125 184 173 / .45); background: var(--signal-wash); color: #cfe6df; }
+.import-preview p { margin-top: 4px; }
+
+@media (max-width: 620px) {
+  .modal { width: calc(100% - 20px); max-height: 94dvh; }
+  .modal-header { padding: 18px 16px 16px; gap: 12px; }
+  .modal-header h2 { font-size: 21px; }
+  .modal-header p { font-size: 13.5px; }
+  .modal-body { padding: 18px 16px 22px; }
+  .modal-footer { padding: 12px 16px; }
+  .form-grid, .control-fields { grid-template-columns: 1fr; gap: 14px; }
+  .field :is(input:not([type="file"]), select, textarea) { font-size: 16px; }
+  .editor-body { gap: 20px; }
+  .detail-body { gap: 20px; }
+  .detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .controls-grid { grid-template-columns: 1fr; gap: 8px; }
+  .control-tile { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; }
+  .control-tile dd { margin-top: 0; }
+  .detail-inspection { padding: 16px 14px; }
+  .detail-findings .finding-copy { grid-template-columns: 1fr; }
+}

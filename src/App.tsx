@@ -1,4 +1,4 @@
-import { AlertTriangle, RotateCcw } from 'lucide-react'
+import { AlertTriangle, LayoutDashboard, ListChecks, RotateCcw, ShieldAlert } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { dateKey } from './assets'
 import { exportCsv } from './csv'
@@ -13,9 +13,9 @@ import { Overview } from './components/Overview'
 import type { StatusFilter } from './components/Shared'
 
 const navigation = [
-  { id: 'overview', label: 'Overview' },
-  { id: 'inventory', label: 'Inventory' },
-  { id: 'findings', label: 'Security findings' },
+  { id: 'overview', label: 'Overview', icon: LayoutDashboard },
+  { id: 'inventory', label: 'Inventory', icon: ListChecks },
+  { id: 'findings', label: 'Security findings', icon: ShieldAlert },
 ] as const
 
 type Page = (typeof navigation)[number]['id']
@@ -111,24 +111,32 @@ export default function App() {
   return <div className="app-shell">
     <a className="skip-link" href="#main-content">Skip to content</a>
     <header className="app-header">
-      <div className="header-inner">
-        <div className="brand"><p>Asset Security <span>Dashboard</span></p><span className="brand-caption">Device inventory & security hygiene</span></div>
-        <div className="topbar-actions">
-          {demoCount > 0 && <span className="demo-label">
-            {demoCount === rows.length ? 'Demo dataset' : `${demoCount} demo devices`}</span>}
-          <button type="button" className="text-button reset-button" onClick={() => openDialog({ kind: 'reset' })}>
-            <RotateCcw size={15} aria-hidden="true" /> Reset demo
-          </button>
-        </div>
+      <div className="brand">
+        <svg className="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path className="mark-frame" d="M3 10V5a2 2 0 0 1 2-2h5M22 3h5a2 2 0 0 1 2 2v5M29 22v5a2 2 0 0 1-2 2h-5M10 29H5a2 2 0 0 1-2-2v-5" />
+          <path className="mark-signal" d="M16 8.5v3.5M16 20v3.5M8.5 16H12M20 16h3.5" />
+          <circle className="mark-core" cx="16" cy="16" r="3" />
+        </svg>
+        <div><p>Asset Security <span>Dashboard</span></p><span className="brand-caption">Device inventory & security hygiene</span></div>
       </div>
-      <div className="nav-rail">
-        <nav aria-label="Main navigation" className="navigation">
-          {navigation.map(({ id, label }) => <button key={id}
-            type="button" className="nav-link" aria-current={page === id ? 'page' : undefined} onClick={() => navigate(id)}>
-            <span>{label}</span>
-            {id === 'findings' && findingsCount > 0 && <span className="nav-count" aria-label={`${findingsCount} findings`}>{findingsCount}</span>}
-          </button>)}
-        </nav>
+      <nav aria-label="Main navigation" className="navigation">
+        {navigation.map(({ id, label, icon: Icon }) => <button key={id}
+          type="button" className="nav-link" aria-current={page === id ? 'page' : undefined} onClick={() => navigate(id)}>
+          <Icon size={18} aria-hidden="true" />
+          <span>{label}</span>
+          {id === 'findings' && findingsCount > 0 && <span className="nav-count" aria-label={`${findingsCount} findings`}>{findingsCount}</span>}
+        </button>)}
+      </nav>
+      <div className="system-panel">
+        <dl className="system-readout">
+          <div><dt>Dataset</dt><dd className={demoCount > 0 ? 'demo-label' : undefined}>
+            {demoCount === 0 ? `${rows.length} ${rows.length === 1 ? 'device' : 'devices'}` : demoCount === rows.length ? 'Demo dataset' : `${demoCount} demo devices`}</dd></div>
+          <div className="readout-extra"><dt>As of</dt><dd>{today} UTC</dd></div>
+          <div className="readout-extra"><dt>Storage</dt><dd>This browser only</dd></div>
+        </dl>
+        <button type="button" className="text-button reset-button" onClick={() => openDialog({ kind: 'reset' })}>
+          <RotateCcw size={15} aria-hidden="true" /> Reset demo
+        </button>
         <span className="local-label">Browser-only prototype</span>
       </div>
     </header>
@@ -139,11 +147,13 @@ export default function App() {
             'Browser storage is unavailable or full.'} Changes are temporary. Export any records you want to keep before closing or reloading this page.</p>
         </div>}
         <div role="status" className={message ? 'notice success' : 'sr-only'}>{message}</div>
+        <div className="page" key={page}>
         {page === 'overview' && <Overview rows={rows} onInventory={(filter) => navigate('inventory', filter)}
           onFindings={(filter) => navigate('findings', 'all', filter)} onSelect={onSelect} onAdd={onAdd} />}
         {page === 'inventory' && <InventoryPage rows={rows} status={status} onStatus={setStatus} onAdd={onAdd}
           onImport={() => openDialog({ kind: 'import' })} onExport={downloadInventory} onSelect={onSelect} />}
         {page === 'findings' && <FindingsPage rows={rows} category={category} onCategory={setCategory} onSelect={onSelect} />}
+        </div>
         <footer className="app-footer">
           <p><span className="footer-label">Local records</span> Records stay in this browser. They aren’t automatically shared with other users or devices.</p>
           <span className="footer-credit">Educational prototype · Fictional demo data</span>

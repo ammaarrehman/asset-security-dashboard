@@ -4,7 +4,8 @@ import type { FormEvent } from 'react'
 import { backupOptions, deviceTypes, emptyAsset, endpointOptions, fieldLimits, formatDate, maxAssets, patchOptions, validateAsset } from '../assets'
 import type { AssetErrors, AssetInput } from '../assets'
 import { importCsv, maxCsvBytes } from '../csv'
-import { DeviceIcon, FindingCopy, Modal, StatusBadge } from './Shared'
+import { controls, controlState } from '../insights'
+import { DeviceIcon, FindingCopy, FindingKind, Modal, StateGlyph, StatusBadge } from './Shared'
 import type { AssetView } from './Shared'
 
 const selectFields = [
@@ -116,19 +117,22 @@ export function AssetDetails({ row: { asset, findings, status }, focusAction, on
     ['Device type', asset.type], ['Operating system', asset.os || 'Not recorded'],
     ['Owner or team', asset.owner || 'Unassigned'], ['Last reviewed', formatDate(asset.reviewed)],
   ]
-  const controls = [
-    ['Endpoint protection', asset.endpoint], ['Patch status', asset.patch], ['Backup status', asset.backup],
-  ]
-  return <Modal title={asset.name} description={asset.demo ? 'Fictional demo device' : 'Device record'} onClose={onClose} wide>
+  return <Modal title={asset.name} description={asset.demo ? 'Fictional demo device' : 'Device record'} onClose={onClose} wide
+    lead={<DeviceIcon type={asset.type} />}>
     <div className="modal-body detail-body" role="region" aria-label="Asset details" tabIndex={0}>
-      <div className="detail-summary"><DeviceIcon type={asset.type} /><StatusBadge status={status} /></div>
+      <div className="detail-summary"><StatusBadge status={status} />
+        <span className="detail-count">{findings.length} {findings.length === 1 ? 'finding' : 'findings'} from this record</span></div>
       <dl className="detail-grid">{details.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
       <section><h3>Recorded security controls</h3>
-        <dl className="detail-grid controls-grid">{controls.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+        <dl className="detail-grid controls-grid">{controls.map(({ key, label }) => {
+          const state = controlState(asset, key)
+          return <div key={key} className={`control-tile ${state}`}><dt>{label}</dt><dd><StateGlyph state={state} />{asset[key]}</dd></div>
+        })}</dl>
       </section>
-      <section className="detail-inspection inspection"><h3>Findings and actions</h3>
+      <section className="detail-inspection"><h3>Findings and actions</h3>
         {findings.length ? <ul className="detail-findings">{findings.map((finding) => <li key={finding.category}>
-          <FindingCopy finding={finding} heading="h4" />
+          <div className="detail-finding-head"><h4>{finding.title}</h4><FindingKind kind={finding.kind} /></div>
+          <FindingCopy asset={asset} finding={finding} />
         </li>)}</ul> : <p className="detail-clear"><ShieldCheck size={18} aria-hidden="true" /> No gaps flagged in the record. Verify controls independently.</p>}
       </section>
       {asset.notes && <section><h3>Notes</h3><p className="asset-notes">{asset.notes}</p></section>}

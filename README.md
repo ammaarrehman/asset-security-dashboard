@@ -2,7 +2,7 @@
 
 A browser-based asset inventory for small nonprofits. Track device ownership, endpoint protection, patching, and backups in one place. The dashboard applies explicit rules to flag recorded gaps and show what still needs verification.
 
-Built as a Cyber Ready Clinic capstone. The app opens with 18 fictional nonprofit devices. [5½-minute presentation and demo outline](docs/capstone-outline.md)
+Built as a Cyber Ready Clinic capstone. The app opens with 18 fictional nonprofit devices. The [current presentation](docs/presentation/Presenter_Guide_v2.md) is planned for about 4:35, under five minutes.
 
 **[Live demo](https://ammaarrehman.github.io/asset-security-dashboard/)** · [Source code](https://github.com/ammaarrehman/asset-security-dashboard)
 
@@ -10,22 +10,24 @@ The public demo was verified in Chromium on 12 November 2026, including inventor
 
 ## Capstone Presentation
 
-Explore the Cyber Ready Clinic capstone through a six-slide presentation and a timed presenter guide, including a live demonstration. The materials use fictional nonprofit data and explain the prototype's scope and limitations.
+Explore the Cyber Ready Clinic capstone through six slides and a timed presenter guide, including a 94-second recorded demonstration. The planned talk is about 4:35, under five minutes. The materials use fictional nonprofit data and explain the prototype's scope and limitations. Playback and delivery should be rehearsed on the presentation computer.
 
-- [Download the PowerPoint](https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone.pptx)
-- [Read the presenter guide](docs/presentation/Presenter_Guide.md)
-- [View the slide preview](docs/presentation/Slides_Preview.png)
+- [Download the current PowerPoint (v2)](docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx)
+- [Read the current presenter guide](docs/presentation/Presenter_Guide_v2.md)
+- [View the current slide preview](docs/presentation/Slides_Preview_v2.png)
 - [Open the live application](https://ammaarrehman.github.io/asset-security-dashboard/)
 
-The [presentation kit](docs/presentation/README.md) includes a live-demo QR code. The original [capstone outline](docs/capstone-outline.md) remains available. See [future improvement ideas](docs/future-improvements.md) for optional work beyond this presentation.
+The [presentation kit](docs/presentation/README.md) includes the recording, PDF fallback, and live-demo QR code. Archived originals remain available: [PowerPoint](docs/presentation/Asset_Security_Dashboard_CRC_Capstone.pptx), [guide](docs/presentation/Presenter_Guide.md), [preview](docs/presentation/Slides_Preview.png), and [outline](docs/capstone-outline.md). Their earlier timing is not the current under-five-minute plan. See [future improvement ideas](docs/future-improvements.md) for optional work beyond this presentation.
 
 ## Screenshots
 
-Actual Chromium captures of the redesigned interface, using fictional demo devices and a fixed review date of 11 November 2026. See the [browser and accessibility review](docs/verification/redesign/README.md) for results and coverage.
+Actual Chromium captures of the interface on this branch, using fictional demo devices and a fixed review date of 11 November 2026. See the [visual overhaul review](docs/verification/visual-overhaul/README.md) for results, coverage, and before-and-after sheets.
 
 [Visual review contact sheet](docs/screenshots/visual-review.png) · [Download all screenshots](docs/screenshots/asset-security-dashboard-screenshots.zip)
 
-![Dashboard with the 18-device demo, status totals, device and finding charts, and inventory preview](docs/screenshots/dashboard-desktop.png)
+![Overview with the 18-device demo, status totals, priority follow-ups, and charts](docs/screenshots/dashboard-desktop.png)
+
+![Relationship diagram linking assets, recorded controls, findings, and next actions](docs/screenshots/relationship-diagram.png)
 
 <details>
 <summary>Inventory, findings, and responsive layouts</summary>
@@ -50,7 +52,7 @@ Actual Chromium captures of the redesigned interface, using fictional demo devic
 
 ## Features
 
-- Overview with total devices, three recorded security statuses, device types, and findings by category.
+- Overview with total devices, three recorded security statuses, priority follow-ups in a documented fixed order, findings by category, device types, and a diagram of how recorded values lead to findings.
 - Searchable, filterable inventory with add, edit, and confirmed delete.
 - Device details with recorded controls, findings, and recommended actions.
 - CSV import with validation and a confirmation preview. CSV export includes the full inventory and escapes formula-like cells.
@@ -107,9 +109,9 @@ npm run preview
 
 Vitest covers findings, status classification, CSV validation and export safety, inventory operations, and storage failure handling. The build checks TypeScript and writes the static app to `dist/`. Vite uses `/asset-security-dashboard/` as its base path for GitHub Pages.
 
-On macOS, `npm run qa:visual` builds the production app and uses Playwright Chromium to check 1440×900, 1280×800, 768×1024, and 390×844 layouts, keyboard interaction, inventory workflows, CSV import/export, and refresh persistence. It runs axe-core accessibility scans, captures real browser screenshots, and regenerates the gallery, contact sheet, and ZIP. Playwright and axe-core are pinned development dependencies; the command downloads Chromium if it is missing. The app is loaded through local request interception at the configured base path, so no listening server or deployment is needed. A fresh isolated browser profile keeps existing browser records untouched.
+On macOS, `npm run qa:visual` builds the production app and uses Playwright Chromium to check 1440×900, 1280×800, 768×1024, and 390×844 layouts, plus 320px and 600/621/640/660/680/700px reflow, keyboard interaction, inventory workflows, CSV import/export, and refresh persistence. It runs axe-core accessibility scans and captures real browser screenshots under ignored `test-results/browser-qa/`, or `ASSET_QA_OUTPUT` when supplied. All review images stay there. Playwright and axe-core are pinned development dependencies; the command downloads Chromium if it is missing. The app is loaded through local request interception at the configured base path, so no listening server or deployment is needed. A fresh isolated browser profile keeps existing browser records untouched.
 
-Failures produce a nonzero exit status and a [machine-readable report](docs/verification/redesign/chromium/results.json); the gallery is refreshed only after browser assertions pass. Inspect the generated images after each run. Automated checks do not establish complete accessibility conformance or replace assistive-technology testing.
+Failures produce a nonzero exit status and `results.json` in the chosen output folder. Replacing committed captures, galleries, comparison images and the ZIP requires the explicit `--update-gallery` option (`npm run qa:update-gallery`) and happens only after browser assertions pass. Output under `docs/` is rejected without that option. The [earlier approved report](docs/verification/visual-overhaul/chromium/results.json) remains available. Inspect generated images after each run. Automated checks do not establish complete accessibility conformance or replace assistive-technology testing.
 
 GitHub Actions runs a clean install, lint, tests, TypeScript checks, and the production build on every push to `main`, then deploys `dist/` to GitHub Pages. The workflow also supports manual dispatch and serializes deployments. [Deployment runs](https://github.com/ammaarrehman/asset-security-dashboard/actions/workflows/deploy-pages.yml)
 
