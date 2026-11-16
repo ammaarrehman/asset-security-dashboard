@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "slides": 6,
+  "relationships": 67,
+  "preparedNotesMatchVerbatim": true,
+  "slide6HyperlinksMatch": true,
+  "cueRowsMatch": 13,
+  "scriptCueRowsMatch": 13,
+  "drawingIdsUnique": true,
+  "embeddedVideoMatches": true,
+  "videoDurationSeconds": 73,
+  "estimatedPresentationSeconds": 209,
+  "guideSpeechMatches": true,
+  "scriptSpeechMatches": true,
+  "archiveUnchanged": true,
+  "videoSha256": "575d34297172b3f73e80b7376091cb58e18263927a34d6eb7f71466fbf8e5cad",
+  "deckSha256": "71db41d416cecd6d6838b8588dca717e77d12d340d51d2ed4b50f0eeb304ebc0"
+}

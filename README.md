@@ -26,7 +26,7 @@ The [73-second recorded demonstration](docs/presentation/story-review/Demo_Recor
 Explore the Cyber Ready Clinic capstone through six slides and a timed presenter guide, including the approved 73-second recorded demonstration. The planned talk is approximately **3:29 (estimated)**, with a target of 3:20 to 4:00 and a hard maximum under five minutes. The materials use fictional nonprofit data and explain the prototype's scope and limitations. Playback and delivery should be rehearsed on the presentation computer.
 
 - [Download the current PowerPoint (v2)](docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx)
-- [Read the final natural script](docs/presentation/story-review/Natural_Script.md)
+- [Read the prepared Wednesday speaker notes](docs/presentation/Prepared_Speaker_Notes.md)
 - [Read the current presenter guide](docs/presentation/Presenter_Guide_v2.md)
 - [View the current slide preview](docs/presentation/Slides_Preview_v2.png)
 - [Download the PDF fallback](docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf)

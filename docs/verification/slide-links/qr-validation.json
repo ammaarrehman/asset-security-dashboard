@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "file": "docs/presentation/Live_Demo_QR.png",
+      "destination": "https://ammaarrehman.github.io/asset-security-dashboard/",
+      "renderedQrCrop": false
+    },
+    {
+      "file": "docs/presentation/Live_Demo_QR_v2.png",
+      "destination": "https://ammaarrehman.github.io/asset-security-dashboard/",
+      "renderedQrCrop": false
+    },
+    {
+      "file": "docs/presentation/slides/Slide_06.png",
+      "destination": "https://ammaarrehman.github.io/asset-security-dashboard/",
+      "renderedQrCrop": true
+    }
+  ]
+}

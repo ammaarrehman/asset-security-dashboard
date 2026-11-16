@@ -1,0 +1,29 @@
+{
+  "description": "Prepared speaker notes preserved verbatim from the owner’s Wednesday Keynote on 2026-11-16. Visible slide wording and the original cue manifest remain separate; these notes govern delivery.",
+  "slides": [
+    {
+      "slide": 1,
+      "notes": "\"Hi, I'm Ammaar, and this is my Cyber Ready Clinic capstone.\n\nI built a dashboard that helps small organizations keep track of their devices and basic security information.\n\nAll the devices in this demo are fictional, so I can show how it works without using real client data.\""
+    },
+    {
+      "slide": 2,
+      "notes": "\"During Discover 5 in Cyber Ready Clinic, I learned how important it is to know what devices an organization has and how they're protected.\n\nIf that information is missing or out of date, it's harder to tell what needs attention.\n\nWe also talked about how you can't really check endpoint protection coverage if you don't know which devices you have. That idea is what inspired this project.\"\n\nPause briefly and point to the missing information in the table."
+    },
+    {
+      "slide": 3,
+      "notes": "\"My dashboard puts device information in one place.\n\nYou can record the status of updates, security software, and backups.\n\nBased on those records, it highlights gaps and suggests what to check next.\n\nI also made missing information visible as Unknown, because not knowing the status of a device is something a team still needs to check.\"\n\nPoint across the diagram."
+    },
+    {
+      "slide": 4,
+      "notes": "\"This laptop's record shows overdue updates, so the dashboard flags it.\n\nOnce someone confirms the updates are installed, they update the record and the recorded finding clears.\"\n\nPoint to the Before and After. Then advance to Slide 5."
+    },
+    {
+      "slide": 5,
+      "notes": "When the video begins:\n\n\"Here are 18 fictional devices. I'm going to show how the dashboard flags a laptop that needs attention.\"\n\nWhen the laptop appears:\n\n\"This laptop has overdue updates recorded, so the dashboard flags it.\n\nIn a real organization, someone would install and verify those updates before changing the record.\"\n\nWhen Healthy appears:\n\n\"Now that the record is updated, the laptop's finding clears.\n\nThat doesn't mean the dashboard actually scanned or fixed the laptop. Other devices still need attention.\"\n\nLet the video finish. Then advance to Slide 6."
+    },
+    {
+      "slide": 6,
+      "notes": "\"CRC taught me why it matters to know what devices you have.\n\nBuilding this also taught me to keep missing information visible.\n\nThe dashboard organizes what people record. It doesn't scan devices or verify their security.\n\nThe bigger lesson for me is that a tool alone doesn't solve the problem. Someone still has to verify the information and act on it.\n\nIf I kept developing this, I'd want to connect it to real device management tools.\n\nThank you.\""
+    }
+  ]
+}

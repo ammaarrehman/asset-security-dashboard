@@ -4,7 +4,13 @@
 
 **Preferred recording:** [Demo_Recording_73s.mp4](story-review/Demo_Recording_73s.mp4), 73 seconds, embedded on slide 5. The original 94-second recording remains an archive at `media/Demo_Recording.mp4`.
 
-**Read-aloud script:** [Natural_Script.md](story-review/Natural_Script.md). Most spoken content is printed on the slides. The demo narration is in the notes and cue table. Do not read the opening demo sentence twice.
+**Current delivery notes:** [Prepared Wednesday speaker notes](Prepared_Speaker_Notes.md), preserved verbatim from the prepared Keynote and embedded in the PowerPoint. Use the simplified three-part Slide 5 narration. Slides 1–3 and 6 include the owner’s expanded notes. Rehearse the expanded wording; 3:29 remains the earlier estimate.
+
+**Earlier slide script and detailed cues:** [Natural_Script.md](story-review/Natural_Script.md) and the reference sections below retain the original visible wording and cue manifest. They do not replace the current delivery notes.
+
+**Slide 6 links:** [Live demo](https://ammaarrehman.github.io/asset-security-dashboard/) and [GitHub source](https://github.com/ammaarrehman/asset-security-dashboard) are clickable labels and visible addresses. The existing QR still opens the demo.
+
+**Playback:** The prepared Desktop Keynote retains its existing movie behavior. The regenerated PowerPoint requires a playback check in the chosen presentation app; do not assume autoplay. In the prepared Keynote, avoid pressing Space again while the movie is already playing.
 
 ## The project in one breath
 

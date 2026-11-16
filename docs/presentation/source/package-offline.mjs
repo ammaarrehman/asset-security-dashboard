@@ -20,6 +20,7 @@ const files = [
   ['Asset_Security_Dashboard_CRC_Capstone_v2.pdf', path.join(kit, 'Asset_Security_Dashboard_CRC_Capstone_v2.pdf')], // static fallback
   ['story-review/Demo_Recording_73s.mp4', path.join(kit, 'story-review/Demo_Recording_73s.mp4')], // plays in QuickTime if the deck's video won't
   ['story-review/Natural_Script.md', path.join(kit, 'story-review/Natural_Script.md')],
+  ['Prepared_Speaker_Notes.md', path.join(kit, 'Prepared_Speaker_Notes.md')],
   ['Presenter_Guide_v2.md', path.join(kit, 'Presenter_Guide_v2.md')],
   ['Slides_Preview_v2.png', path.join(kit, 'Slides_Preview_v2.png')],
   ['Live_Demo_QR_v2.png', path.join(kit, 'Live_Demo_QR_v2.png')],

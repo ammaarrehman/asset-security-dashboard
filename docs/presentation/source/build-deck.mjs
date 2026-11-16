@@ -21,12 +21,11 @@ const icon = (name) => media(path.join('icons', name + '.png'))
 const poster = async (name) => 'image/png;base64,' + await fs.readFile(media(name), 'base64')
 const output = path.join(kit, 'Asset_Security_Dashboard_CRC_Capstone_v2.pptx')
 const liveUrl = 'https://ammaarrehman.github.io/asset-security-dashboard/'
+const githubUrl = 'https://github.com/ammaarrehman/asset-security-dashboard'
+// Preserve the owner's newer Wednesday narration independently of visible text.
+const preparedNotes = JSON.parse(await fs.readFile(path.join(here, 'prepared-notes.json'), 'utf8'))
+if (preparedNotes.slides.length !== 6 || preparedNotes.slides.some((note, i) => note.slide !== i + 1)) throw new Error('Expected six ordered prepared notes')
 const story = JSON.parse(await fs.readFile(path.join(here, 'presentation-story.json'), 'utf8'))
-const clock = (seconds) => `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`
-const time = (index) => {
-  const start = story.slides.slice(0, index).reduce((sum, slide) => sum + slide.durationSeconds, 0)
-  return `${clock(start)} to ${clock(start + story.slides[index].durationSeconds)} (${story.slides[index].durationSeconds} seconds)`
-}
 const demoCues = JSON.parse(await fs.readFile(path.join(here, 'demo-cues.json'), 'utf8'))
 if (createHash('sha256').update(await fs.readFile(path.join(kit, demoCues.videoPath))).digest('hex') !== demoCues.videoSha256) {
   throw new Error('The demo video changed. Reinspect its timestamps before rebuilding the deck.')
@@ -102,12 +101,6 @@ function shot(slide, file, box, [cx, cy, cw, ch], altText) {
 const hairline = (slide, box) => slide.addShape(pres.ShapeType.rect, { ...box, fill: { type: 'none' }, line: { color: C.line, width: 1 } })
 const iconImage = (slide, name, x, y, size, altText) => slide.addImage({ path: icon(name), x, y, w: size, h: size, altText })
 const newSlide = (masterName = 'PLAIN') => pres.addSlide({ masterName })
-const notes = ({ time, say, point, more }) => [
-  `TIME: ${time}`,
-  `SAY (the text on the slide):\n${say.join(' ')}`,
-  `POINT AT: ${point}`,
-  ...(more ? [more] : []),
-].join('\n\n')
 
 // 1. Cover: who I am, what I built, and the real overview filling the lower half.
 {
@@ -120,12 +113,7 @@ const notes = ({ time, say, point, more }) => [
   const box = shot(slide, 'Demo_Step_1.png', { x: M, y: sy, w: W - M }, [0, 0, 1440, (H - sy) * 1440 / (W - M)],
     'Screenshot of the dashboard overview: 18 fictional devices, 9 healthy, 6 needing attention, 3 unknown')
   hairline(slide, { ...box, w: box.w + 0.1, h: box.h + 0.1 })
-  slide.addNotes(notes({
-    time: time(0),
-    say,
-    point: 'The screenshot when you say "a dashboard."',
-    more: 'IF ASKED: every device in the dashboard is made up. No real organization’s information is shown.',
-  }))
+  slide.addNotes(preparedNotes.slides[0].notes)
 }
 
 // 2. Why: a plain device list where some answers are blank or unsure. No highlighting; the gaps are the point.
@@ -152,12 +140,7 @@ const notes = ({ time, say, point, more }) => [
   slide.addShape(pres.ShapeType.line, { x: M, y: ty + rh * (rows.length + 1), w: tw, h: 0, line: { color: C.line, width: 0.75 } })
   const say = story.slides[1].say
   script(slide, say, { x: 8.7, y: 1.95, w: R - 8.7, h: 4.6 })
-  slide.addNotes(notes({
-    time: time(1),
-    say,
-    point: 'The list on the left. Let the room notice the blanks, the question mark, and "Not sure."',
-    more: 'IF ASKED: this is the kind of simple list a small team might keep. Two devices have problems you can only see if you read every row (Outreach Laptop 03 has overdue updates; Intake Laptop 01 has no protection and backups off), and two have missing answers. All of these devices are made up.',
-  }))
+  slide.addNotes(preparedNotes.slides[1].notes)
 }
 
 // 3. What it does: one process, drawn large across the slide.
@@ -181,12 +164,7 @@ const notes = ({ time, say, point, more }) => [
     if (i < steps.length - 1) slide.addShape(pres.ShapeType.line, { x: cx + d / 2 + 0.18, y: cy + d / 2, w: span - d - 0.36, h: 0,
       line: { color: C.text3, width: 1.5, endArrowType: 'triangle' }, objectName: 'Arrow' })
   })
-  slide.addNotes(notes({
-    time: time(2),
-    say,
-    point: 'The four circles, left to right, as you say the last two sentences.',
-    more: 'IF ASKED: the rules are fixed, so the same record always gives the same result. There is no score and no guessing. A missing answer counts as something to check, because not knowing is a risk too.',
-  }))
+  slide.addNotes(preparedNotes.slides[2].notes)
 }
 
 // 4. Example: the same record before and after, from the real app, large enough to read.
@@ -210,12 +188,7 @@ const notes = ({ time, say, point, more }) => [
   side(M, 'Before', 'Before', 'Patches overdue', C.amber, 942, 'Screenshot: Patch status Overdue', 'Screenshot: Needs attention, 1 finding from this record')
   side(M + w + gap, 'After', 'After', 'Patches up to date', C.cyan, 816, 'Screenshot: Patch status Up to date', 'Screenshot: Healthy, 0 findings from this record')
   iconImage(slide, 'ArrowRight', M + w + gap / 2 - 0.22, y + fieldH / 2 - 0.22, 0.44, 'Arrow from before to after')
-  slide.addNotes(notes({
-    time: time(3),
-    say,
-    point: 'Before on the left (Patch status Overdue, 1 finding) when you say "overdue updates." After on the right (Up to date, 0 findings) when you say "the recorded finding clears."',
-    more: 'IF ASKED: the dashboard does not touch the laptop. A person installs the updates, checks that they worked, and then changes the record.',
-  }))
+  slide.addNotes(preparedNotes.slides[3].notes)
 }
 
 // 5. Demo: the recorded video is the slide.
@@ -233,37 +206,38 @@ const notes = ({ time, say, point, more }) => [
   text(slide, say.map((value, i) => ({ text: value, options: { breakLine: i < say.length - 1 } })),
     { x: 5.75, y: 0.55, w: R - 5.75, h: 0.95, fontSize: 19, color: C.text2, lineSpacingMultiple: 1.15, valign: 'middle', objectName: 'Read-aloud text' })
   hairline(slide, video)
-  slide.addNotes(notes({
-    time: time(4),
-    say,
-    point: 'Click the video once to play it (in Keynote, press the space bar once). Say the two sentences once while the overview is on screen. Then use these approximate cues:\n' +
-      demoCues.cues.map(({ time, screen, say: cue }) => `${time} ${screen}: ${cue}`).join('\n'),
-    more: 'LIVE INSTEAD: if you prefer a live demo, switch to the browser and follow the same steps. Click Reset demo first.\n\nIF THE VIDEO DOES NOT PLAY: stay on this slide and describe the steps. Then go back to slide 4, which shows the before and after.',
-  }))
+  slide.addNotes(preparedNotes.slides[4].notes)
 }
 
-// 6. What I took away: words only, then thanks. The QR code is for anyone who wants to try it.
+// 6. Keep the conclusion and thanks; links sit beside the existing demo QR.
 {
   const slide = newSlide()
   title(slide, 'What I took away from this')
   const say = story.slides[5].say
   script(slide, say, { x: M, y: 1.9, w: 8.9, h: 3.2 }, 28)
   text(slide, 'Thank you.', { x: M, y: 5.55, w: 6, h: 0.9, fontSize: 48, bold: true, color: C.cyan, objectName: 'Thank you' })
+  for (const [label, url, y] of [['LIVE DEMO', liveUrl, 5.12], ['GITHUB SOURCE', githubUrl, 6.02]]) {
+    text(slide, label, { x: 4.65, y, w: 6.4, h: 0.30, fontSize: 18, bold: true, color: C.cyan,
+      hyperlink: { url }, objectName: label + ' link' })
+    text(slide, url.replace('https://', ''), { x: 4.65, y: y + 0.34, w: 6.4, h: 0.38, fontSize: 18, color: C.text2,
+      hyperlink: { url }, objectName: label + ' URL' })
+  }
   const qs = 1.25, qx = R - qs, qy = 5.35
   text(slide, 'Try it yourself', { x: qx - 1.0, y: qy - 0.48, w: qs + 1.0, h: 0.36, fontSize: 16, color: C.text2, align: 'right' })
   slide.addImage({ path: qrFile, x: qx, y: qy, w: qs, h: qs, altText: 'QR code linking to the live demo at ' + liveUrl })
-  slide.addNotes(notes({
-    time: time(5),
-    say,
-    point: 'Look at the audience, not the slide. Say "Thank you" and stop.',
-    more: 'The QR code opens the live demo for anyone who wants to try it. IF ASKED what it does not do: it does not scan devices, install updates, check that protections really work, or prove compliance with a security standard.',
-  }))
+  slide.addNotes(preparedNotes.slides[5].notes)
 }
 
 // A plain fade between slides. pptxgenjs has no transition option, so the standard element is added afterwards.
 // Validate in memory before replacing the delivered file, so an ID regression
 // cannot leave a broken draft at the final PowerPoint path.
 const zip = await JSZip.loadAsync(await pres.write({ outputType: 'nodebuffer' }))
+// Keynote uses theme link colors even when a run specifies its own fill.
+// Keep both unvisited and visited links in the existing muted teal palette.
+for (const name of Object.keys(zip.files).filter((file) => /^ppt\/theme\/theme\d+\.xml$/.test(file))) {
+  const xml = await zip.file(name).async('string')
+  zip.file(name, xml.replace(/(<a:(?:hlink|folHlink)><a:srgbClr val=")[^"]+/g, '$1' + C.cyan))
+}
 for (const name of Object.keys(zip.files).filter((file) => /^ppt\/slides\/slide\d+\.xml$/.test(file))) {
   const xml = await zip.file(name).async('string')
   assertUniqueDrawingIds(xml, name)

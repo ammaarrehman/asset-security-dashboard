@@ -23,6 +23,13 @@ def validate(deck, kit):
     guide = (kit / 'Presenter_Guide_v2.md').read_text()
     video = (kit / cues['videoPath']).read_bytes()
     story = json.loads((kit / 'source/presentation-story.json').read_text())
+    prepared = json.loads((kit / 'source/prepared-notes.json').read_text())['slides']
+    assert [note['slide'] for note in prepared] == list(range(1, 7))
+    prepared_guide = (kit / 'Prepared_Speaker_Notes.md').read_text()
+    link_targets = {
+        'https://ammaarrehman.github.io/asset-security-dashboard/',
+        'https://github.com/ammaarrehman/asset-security-dashboard',
+    }
     assert sum(slide['durationSeconds'] for slide in story['slides']) == story['targetDurationSeconds']
     assert 200 <= story['targetDurationSeconds'] <= 240, 'Presentation timing outside target'
     assert story['slides'][4]['durationSeconds'] == cues['durationSeconds'] + 6
@@ -64,9 +71,14 @@ def validate(deck, kit):
             if name.endswith('.rels'):
                 relationship_ids = set()
                 for rel in roots[name]:
-                    assert rel.attrib.get('TargetMode') != 'External', f'External dependency: {name}'
                     assert rel.attrib['Id'] not in relationship_ids, f'Duplicate relationship: {name}'
                     relationship_ids.add(rel.attrib['Id'])
+                    if rel.attrib.get('TargetMode') == 'External':
+                        assert name == 'ppt/slides/_rels/slide6.xml.rels', f'External dependency: {name}'
+                        assert rel.attrib['Type'] == R + '/hyperlink', f'External media dependency: {name}'
+                        assert rel.attrib['Target'] in link_targets, 'Unexpected hyperlink destination'
+                        relation_count += 1
+                        continue
                     target = rel.attrib['Target']
                     folder = posixpath.dirname(posixpath.dirname(name))
                     resolved = posixpath.normpath(posixpath.join(folder, target)) if not target.startswith('/') else target[1:]
@@ -87,12 +99,13 @@ def validate(deck, kit):
         for index in range(1, 7):
             root = roots[f'ppt/slides/slide{index}.xml']
             note = roots[f'ppt/notesSlides/notesSlide{index}.xml']
-            notes = '\n'.join(t.text or '' for t in note.iter(f'{{{A}}}t'))
-            speech = notes.split('SAY (the text on the slide):\n')[1].split('\n\nPOINT AT:')[0]
+            body = next(sp for sp in note.findall('.//p:sp', NS) if sp.find('.//p:ph', NS).attrib.get('type') == 'body')
+            notes = ''.join(t.text or '' for t in body.iter(f'{{{A}}}t'))
+            assert notes == prepared[index - 1]['notes'], f'Slide {index}: prepared notes changed'
+            assert prepared[index - 1]['notes'] in prepared_guide, f'Slide {index}: prepared guide differs'
             script = next(sp for sp in root.findall('.//p:sp', NS)
                           if sp.find('.//p:cNvPr', NS).attrib.get('name') == 'Read-aloud text')
             slide_speech = ' '.join(t.text or '' for t in script.iter(f'{{{A}}}t'))
-            assert normalized(speech) == normalized(slide_speech), f'Slide {index}: notes differ from visible speech'
             expected_speech = ' '.join(story['slides'][index - 1]['say'])
             assert normalized(slide_speech) == normalized(expected_speech), f'Slide {index}: differs from story source'
             guide_section = guide.split(f'## Slide {index}:', 1)[1].split('\n## ', 1)[0]
@@ -101,21 +114,26 @@ def validate(deck, kit):
             assert normalized(expected_speech) in normalized(natural_script), f'Slide {index}: script differs'
             duration = story['slides'][index - 1]['durationSeconds']
             clock = lambda n: f'{n // 60}:{n % 60:02}'
-            expected_time = f'TIME: {clock(elapsed)} to {clock(elapsed + duration)} ({duration} seconds)'
-            assert expected_time in notes, f'Slide {index}: notes timing differs'
             expected_guide_row = f"| {index}. {story['slides'][index - 1]['title']} | {clock(elapsed)} | {duration} s |"
             assert expected_guide_row in guide, f'Slide {index}: guide timing differs'
             assert f'({clock(elapsed)} to {clock(elapsed + duration)})' in natural_script, f'Slide {index}: script timing differs'
-            assert '\u2014' not in speech, f'Slide {index}: em dash in spoken wording'
             elapsed += duration
-            if index == 5:
-                for cue in cues['cues']:
-                    assert f"{cue['time']} {cue['screen']}: {cue['say']}" in notes, f"Notes omit cue {cue['time']}"
+        slide6 = roots['ppt/slides/slide6.xml']
+        relations = {r.attrib['Id']: r.attrib for r in roots['ppt/slides/_rels/slide6.xml.rels']}
+        linked_text = {}
+        for shape in slide6.findall('.//p:sp', NS):
+            for link in shape.findall('.//a:hlinkClick', NS):
+                target = relations[link.attrib[f'{{{R}}}id']]['Target']
+                linked_text.setdefault(target, set()).add(''.join(t.text or '' for t in shape.iter(f'{{{A}}}t')))
+        for label, target in [('LIVE DEMO', 'https://ammaarrehman.github.io/asset-security-dashboard/'),
+                              ('GITHUB SOURCE', 'https://github.com/ammaarrehman/asset-security-dashboard')]:
+            assert {label, target.replace('https://', '')} <= linked_text.get(target, set()), f'Missing clickable {label}'
         embedded = [n for n in names if n.startswith('ppt/media/') and n.endswith('.mp4')]
         assert len(embedded) == 1, f'Expected one embedded video, got {len(embedded)}'
         assert archive.read(embedded[0]) == video, 'Embedded video differs from standalone recording'
     return {'status': 'passed', 'slides': 6, 'relationships': relation_count,
-            'notesMatchSlides': True, 'cueRowsMatch': len(cue_rows), 'scriptCueRowsMatch': len(script_cues),
+            'preparedNotesMatchVerbatim': True, 'slide6HyperlinksMatch': True,
+            'cueRowsMatch': len(cue_rows), 'scriptCueRowsMatch': len(script_cues),
             'drawingIdsUnique': True, 'embeddedVideoMatches': True,
             'videoDurationSeconds': cues['durationSeconds'], 'estimatedPresentationSeconds': story['targetDurationSeconds'],
             'guideSpeechMatches': True, 'scriptSpeechMatches': True, 'archiveUnchanged': True,
