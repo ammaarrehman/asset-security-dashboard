@@ -1,5 +1,7 @@
 # Final natural read-aloud script
 
+The [prepared Wednesday speaker notes](../Prepared_Speaker_Notes.md) supersede this earlier delivery script and are now embedded in the PowerPoint. This file preserves the earlier visible wording and detailed cue reference; use the three-part Slide 5 narration in the prepared notes.
+
 Preferred 73-second recording approved for slide 5. The deck, speaker notes, and presenter guide use this wording. Planned total: **3:29, about 3:30**, with a natural target of **3:20 to 4:00**. This is an estimate, not a measured rehearsal.
 
 ## Slide 1: Asset Security Dashboard (0:00 to 0:20)

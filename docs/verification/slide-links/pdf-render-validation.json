@@ -1,0 +1,46 @@
+{
+  "pdfPages" : 6,
+  "slide6Links" : [
+    {
+      "bounds" : "{{334.80000000000001, 148.88210000000001}, {460.80000000000001, 22.477900000000005}}",
+      "url" : "https:\/\/ammaarrehman.github.io\/asset-security-dashboard\/"
+    },
+    {
+      "bounds" : "{{334.80000000000001, 148.88210000000001}, {99.324000000000012, 22.477900000000005}}",
+      "url" : "https:\/\/ammaarrehman.github.io\/asset-security-dashboard\/"
+    },
+    {
+      "bounds" : "{{334.80000000000001, 125.384}, {419.45400000000001, 21.495999999999995}}",
+      "url" : "https:\/\/ammaarrehman.github.io\/asset-security-dashboard\/"
+    },
+    {
+      "bounds" : "{{334.80000000000001, 125.384}, {460.80000000000001, 21.495999999999995}}",
+      "url" : "https:\/\/ammaarrehman.github.io\/asset-security-dashboard\/"
+    },
+    {
+      "bounds" : "{{334.80000000000001, 84.082120000000003}, {151.34399999999999, 22.477879999999999}}",
+      "url" : "https:\/\/github.com\/ammaarrehman\/asset-security-dashboard"
+    },
+    {
+      "bounds" : "{{334.80000000000001, 84.082120000000003}, {460.80000000000001, 22.477879999999999}}",
+      "url" : "https:\/\/github.com\/ammaarrehman\/asset-security-dashboard"
+    },
+    {
+      "bounds" : "{{334.80000000000001, 60.583980000000004}, {435.47399999999999, 21.496009999999991}}",
+      "url" : "https:\/\/github.com\/ammaarrehman\/asset-security-dashboard"
+    },
+    {
+      "bounds" : "{{334.80000000000001, 60.583980000000004}, {460.80000000000001, 21.496009999999991}}",
+      "url" : "https:\/\/github.com\/ammaarrehman\/asset-security-dashboard"
+    }
+  ],
+  "status" : "passed",
+  "unchangedRenderedSlides" : [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "visibleAddressesUnwrapped" : true
+}

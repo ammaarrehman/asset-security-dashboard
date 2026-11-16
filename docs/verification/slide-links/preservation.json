@@ -1,0 +1,22 @@
+{
+  "unchangedSlideXml": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "allOriginalEmbeddedMediaIdentical": true,
+  "changedPackageParts": [
+    "docProps/core.xml",
+    "ppt/theme/theme1.xml",
+    "ppt/notesSlides/notesSlide1.xml",
+    "ppt/notesSlides/notesSlide2.xml",
+    "ppt/notesSlides/notesSlide3.xml",
+    "ppt/notesSlides/notesSlide4.xml",
+    "ppt/notesSlides/notesSlide5.xml",
+    "ppt/slides/slide6.xml",
+    "ppt/slides/_rels/slide6.xml.rels",
+    "ppt/notesSlides/notesSlide6.xml"
+  ]
+}
