@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "url": "https://github.com/ammaarrehman/asset-security-dashboard",
+  "http": 200,
+  "finalLinks": [
+    {
+      "text": "current presentation",
+      "href": "https://github.com/ammaarrehman/asset-security-dashboard/blob/main/docs/presentation/Presenter_Guide_v2.md"
+    },
+    {
+      "text": "73-second recorded demonstration",
+      "href": "https://github.com/ammaarrehman/asset-security-dashboard/blob/main/docs/presentation/story-review/Demo_Recording_73s.mp4"
+    },
+    {
+      "text": "Download the current PowerPoint (v2)",
+      "href": "https://github.com/ammaarrehman/asset-security-dashboard/blob/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx"
+    },
+    {
+      "text": "Read the final natural script",
+      "href": "https://github.com/ammaarrehman/asset-security-dashboard/blob/main/docs/presentation/story-review/Natural_Script.md"
+    },
+    {
+      "text": "Read the current presenter guide",
+      "href": "https://github.com/ammaarrehman/asset-security-dashboard/blob/main/docs/presentation/Presenter_Guide_v2.md"
+    },
+    {
+      "text": "View the current slide preview",
+      "href": "https://github.com/ammaarrehman/asset-security-dashboard/blob/main/docs/presentation/Slides_Preview_v2.png"
+    },
+    {
+      "text": "Download the PDF fallback",
+      "href": "https://github.com/ammaarrehman/asset-security-dashboard/blob/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf"
+    },
+    {
+      "text": "Watch the current 73-second demonstration",
+      "href": "https://github.com/ammaarrehman/asset-security-dashboard/blob/main/docs/presentation/story-review/Demo_Recording_73s.mp4"
+    }
+  ],
+  "images": [
+    {
+      "alt": "Overview with the 18-device demo, status totals, priority follow-ups, and charts",
+      "width": 1440,
+      "height": 900,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/dashboard-desktop.png"
+    },
+    {
+      "alt": "Relationship diagram linking assets, recorded controls, findings, and next actions",
+      "width": 1440,
+      "height": 900,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/relationship-diagram.png"
+    },
+    {
+      "alt": "Desktop inventory showing seven Windows devices, their owners, and security statuses",
+      "width": 1440,
+      "height": 900,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/inventory-desktop.png"
+    },
+    {
+      "alt": "Overview at 1280 by 800 with the summary strip and two charts",
+      "width": 1280,
+      "height": 800,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/dashboard-laptop.png"
+    },
+    {
+      "alt": "Asset details for Outreach Laptop 03 showing the overdue patch finding and recommended action",
+      "width": 1440,
+      "height": 900,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/asset-details.png"
+    },
+    {
+      "alt": "Desktop asset editor with grouped identity, recorded controls, and review fields",
+      "width": 1440,
+      "height": 900,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/edit-asset-desktop.png"
+    },
+    {
+      "alt": "Security findings with recorded gaps, unknown information, and recommended actions",
+      "width": 1440,
+      "height": 900,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/security-findings.png"
+    },
+    {
+      "alt": "Tablet dashboard with top navigation, charts, and all inventory columns visible",
+      "width": 768,
+      "height": 1024,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/dashboard-tablet.png"
+    },
+    {
+      "alt": "Dashboard with mobile navigation, status totals, charts, and inventory preview",
+      "width": 390,
+      "height": 4008,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/dashboard-mobile.png"
+    },
+    {
+      "alt": "Mobile inventory with device names and security status side by side",
+      "width": 390,
+      "height": 1866,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/inventory-mobile.png"
+    },
+    {
+      "alt": "Mobile edit form with visible cancel and save buttons",
+      "width": 390,
+      "height": 844,
+      "src": "https://github.com/ammaarrehman/asset-security-dashboard/raw/main/docs/screenshots/edit-asset-mobile.png"
+    }
+  ]
+}

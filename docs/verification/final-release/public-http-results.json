@@ -1,0 +1,446 @@
+{
+  "status": "passed",
+  "checks": 55,
+  "results": [
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 718,
+      "sha256": "9153931d08e02c72a97121fc92350de9d041bf4a950f8296d4cd34d962136ab7"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexMono-Medium-Latin1-CfBEoGIJ.woff2",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexMono-Medium-Latin1-CfBEoGIJ.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 17868,
+      "sha256": "41201b658a328b9d00368215c2f1102770f80b15952ab82631e4006255e6365d"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexMono-Regular-Latin1-DYPusg7z.woff2",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexMono-Regular-Latin1-DYPusg7z.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 17544,
+      "sha256": "e8993d946649b9d01abb1ed06d574b19d8ea3e66b5c3948602db335c44c18e56"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexSans-Light-Latin1-inJE14c2.woff2",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexSans-Light-Latin1-inJE14c2.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 22240,
+      "sha256": "a21e7db1965d4c7af07213226fb11ccd2f61a87a0045ce1fed7cd22918431144"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexSans-Medium-Latin1-B2CuUu4P.woff2",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexSans-Medium-Latin1-B2CuUu4P.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 21960,
+      "sha256": "b5610af04d0d4b5a14a621d96d974b993e945a065db1a8861918f69ef9321934"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexSans-Regular-Latin1-BUjEsRx4.woff2",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexSans-Regular-Latin1-BUjEsRx4.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 20984,
+      "sha256": "b5ad7bd39f996144915f0ad9849a90183b27d8c28ad97ed98af5b1bebc51f6b1"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexSans-SemiBold-Latin1-CIhZjzyK.woff2",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/assets/IBMPlexSans-SemiBold-Latin1-CIhZjzyK.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 22260,
+      "sha256": "fff0ab3a88b0b4aa0b693e4f0201359a15183b08e3fa5696d1918d8f0ade8ad5"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/index-DD3lNELC.js",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/assets/index-DD3lNELC.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 261664,
+      "sha256": "673fa3ec585aa7940b3b6b9a89425e39e97639a232ce454dd339be05513d8e80"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/assets/index-djPhu4HA.css",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/assets/index-djPhu4HA.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 54660,
+      "sha256": "0fb8cc9d647e45dbbf13677222fcce3399c63dfd8893666e5f439b4e38cb1c19"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/favicon.svg",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/favicon.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "bytes": 474,
+      "sha256": "2770ba5ae882fe5a1787d5129b1f36e0308e29b74686a6365def7c2dffa92c21"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/sample-assets.csv",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/sample-assets.csv",
+      "status": 200,
+      "contentType": "text/csv; charset=utf-8",
+      "bytes": 535,
+      "sha256": "841da9d652b8fde523d70a9b007f893145e3ffb0e60674f688d489239430aaa6"
+    },
+    {
+      "url": "https://ammaarrehman.github.io/asset-security-dashboard/",
+      "finalUrl": "https://ammaarrehman.github.io/asset-security-dashboard/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 718,
+      "sha256": "9153931d08e02c72a97121fc92350de9d041bf4a950f8296d4cd34d962136ab7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/final-release/README.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/final-release/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 4304,
+      "sha256": "0abe16e58d1f5510244c429c87adf42ece7479c0d391ad1bcacb7881ee5b6cc3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Presenter_Guide_v2.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Presenter_Guide_v2.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 13445,
+      "sha256": "0367ee9b83a627a59fdb21e37db654d8ac7e0075a03dcc0b09cad9d0cb0b401c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/publication/README.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/publication/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 6484,
+      "sha256": "895cb8bf033ab50c4aa01422468033d0219cfc7f11bed8c5be508faa6d03f3e0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/public/sample-assets.csv",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/public/sample-assets.csv",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 535,
+      "sha256": "841da9d652b8fde523d70a9b007f893145e3ffb0e60674f688d489239430aaa6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/story-review/Natural_Script.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/story-review/Natural_Script.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 4087,
+      "sha256": "0df4463069c42e3cbdd5004a6dc483918344b58d488c99802cffc5fa62f9b36e"
+    },
+    {
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard",
+      "finalUrl": "https://github.com/ammaarrehman/asset-security-dashboard",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 294412,
+      "sha256": "6f1a212fa49608a4fd7a2a8197f257ee59e741f3d0651b305d205cce18695e47"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 2135102,
+      "sha256": "a21e74b94ca3f74a5c0584055da4764c636579a6ac92461d4b0e835859ec516e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Slides_Preview_v2.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Slides_Preview_v2.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1769559,
+      "sha256": "83ab448975fc8caa075af85a4bdb7c9a3ed822c2b6cadaed3a71b24ad083cefa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/README.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 4931,
+      "sha256": "87e70b37b74115e0a5aebf76d36f2ea6e729000a5a16016072d1b0efd60bb304"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Presenter_Guide.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Presenter_Guide.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 5836,
+      "sha256": "4fcd02931e8dd11dd95ed0aaa92905705a70c20ccd92689828712145d41c9d91"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone.pptx",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone.pptx",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 454086,
+      "sha256": "b105a7d4a237711a992c9ab12a635cbc43edac1d1f3f354bde39857016909641"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/capstone-outline.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/capstone-outline.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 2328,
+      "sha256": "9125536d74aea2b0927775b994e6cb4f8928c68dfc9ee6718536f787ffc07bb8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Slides_Preview.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Slides_Preview.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 207826,
+      "sha256": "49083c13549ba37804741f5fb7e2da78ef6b6107ad3e51ac0265a22a166adc5e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/future-improvements.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/future-improvements.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1275,
+      "sha256": "5f754cf2246ee34bfe176f98fc3d22659048717e82b641dc2ab7a9290b13ed9c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/visual-overhaul/README.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/visual-overhaul/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 30672,
+      "sha256": "9cdeb5afdd73434f8bf706039e6b22c0e6cbc7e800308f7ee95c4fd8ed19edaf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/story-review/Demo_Recording_73s.mp4",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/story-review/Demo_Recording_73s.mp4",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 26477822,
+      "sha256": "575d34297172b3f73e80b7376091cb58e18263927a34d6eb7f71466fbf8e5cad"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/dashboard-desktop.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/dashboard-desktop.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 961389,
+      "sha256": "d2119c1076f205006a6029535140dc6dfcb2735f9afac3d60d7f113ca1448efe"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/visual-review.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/visual-review.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 8048347,
+      "sha256": "cf898054b7924750c83229219c46bb06c526c4c681b7028c35cfa593d5ddbd83"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/relationship-diagram.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/relationship-diagram.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 973106,
+      "sha256": "ab162e2966f76063077a961b5d51166474c2d22ca45e1998b25b2eb9f3bef24c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/inventory-desktop.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/inventory-desktop.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 927389,
+      "sha256": "90bc931d157c64218e4ce865e0cb30f4b744f294d67bc003ec59a08925cb7290"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/dashboard-laptop.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/dashboard-laptop.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 822167,
+      "sha256": "36b437f1b2ba1f7772e0f40ef9ff64401f646cb71ebb0cfd0eb72d5154bb2090"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/asset-details.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/asset-details.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 904947,
+      "sha256": "d21239f8d2a16c2c0ad9b2e6128149fb4ffee6dc3e015a1b5024e631e1e2cf50"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/asset-security-dashboard-screenshots.zip",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/asset-security-dashboard-screenshots.zip",
+      "status": 200,
+      "contentType": "application/zip",
+      "bytes": 16977694,
+      "sha256": "d768240c807065dee06109772277888853a859b89f5c590eb361f6acf8fd9961"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/edit-asset-desktop.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/edit-asset-desktop.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 906116,
+      "sha256": "b4d8dff8de06db8853915c8de02b72c0083ab8199a4465fb4803bfa289c75ff8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/security-findings.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/security-findings.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1058616,
+      "sha256": "07849cb2af32e0f30f6c4a9106e42f059cab264039a2599de2a888cb0890e465"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/dashboard-tablet.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/dashboard-tablet.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 622370,
+      "sha256": "24dadd05a58f456dbef631b8869aee0c183dd21a9d1e375ce3fc02626c317700"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/inventory-mobile.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/inventory-mobile.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 611331,
+      "sha256": "6ba4d6a2a33859354d753ab16cf93a17202f5e7ca44b48bdade2f41ebca08353"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/dashboard-mobile.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/dashboard-mobile.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1072285,
+      "sha256": "7fca9d518deb04f31158fa477742a3d5bd8cdd790c82d250ecab89d4fa403eaa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/edit-asset-mobile.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/screenshots/edit-asset-mobile.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 241592,
+      "sha256": "160dab09123c3039ad4499d8f1dbbf973a0bc175994f1413ae4231e4992b459f"
+    },
+    {
+      "url": "https://owasp.org/www-community/attacks/CSV_Injection",
+      "finalUrl": "https://community.owasp.org/attacks/CSV_Injection",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 34811,
+      "sha256": "c9c1121733908ea17a8c57cb1db8fa3ecda8ebedfc84edde9cf74bd0e0660e30"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/LICENSE",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/LICENSE",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1070,
+      "sha256": "c90e4f040e0ee7856224026551a5a609c5f0ebcf05079304b9b95545d12d08df"
+    },
+    {
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/actions/workflows/deploy-pages.yml",
+      "finalUrl": "https://github.com/ammaarrehman/asset-security-dashboard/actions/workflows/deploy-pages.yml",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 192931,
+      "sha256": "148bd7cf61ab5b43b46c6072a06dcdde396a807f1c8a13329a14cf8fd02f24f1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Live_Demo_QR_v2.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Live_Demo_QR_v2.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3587,
+      "sha256": "1e7632e333b3f4d8c5800640143c0b3c474df2bdf7c0a918b27661d1f21bcc77"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/visual-overhaul/chromium/results.json",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/visual-overhaul/chromium/results.json",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 2716026,
+      "sha256": "a740b6428a0185041302509b8d6eb3ed19746b47ec2766eb4cd310c84d58eb26"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Live_Demo_QR.png",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Live_Demo_QR.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1603,
+      "sha256": "cc50c81bed5dbcfbb8d00bc2cfbdc1a39e7b25085dd6750a1c67efdea1b27844"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/final-presentation/README.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/verification/final-presentation/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 6474,
+      "sha256": "daffe4c435a208877431408268110ba4c5f1393e0a16745b6ee01657317da186"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/story-review/Story_and_Pacing_Review.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/story-review/Story_and_Pacing_Review.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 13161,
+      "sha256": "4c37427ac54e0fe77c77d66135746a7087db8fd9632c6f3e12e6987c9ac5eebf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/README.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/README.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 12553,
+      "sha256": "74d1c9ee5e52a00d0725c759dd0d8393a93147013a6b4fd9c4919e6719d235c8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/media/Demo_Recording.mp4",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/media/Demo_Recording.mp4",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 34511550,
+      "sha256": "1954b55777deb9dad3d5d8c9e5cade487e25cb2dc3285d0da51c60fa5bcacb11"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 30508311,
+      "sha256": "e72a26872dac9219960882ebc2937cd5d4c1669172dbd3ae66a1f12474c2cd6b"
+    },
+    {
+      "url": "https://github.com/ammaarrehman/asset-security-dashboard/raw/refs/heads/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/refs/heads/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 30508311,
+      "sha256": "e72a26872dac9219960882ebc2937cd5d4c1669172dbd3ae66a1f12474c2cd6b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "bytes": 2135102,
+      "sha256": "a21e74b94ca3f74a5c0584055da4764c636579a6ac92461d4b0e835859ec516e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Presenter_Guide_v2.md",
+      "finalUrl": "https://raw.githubusercontent.com/ammaarrehman/asset-security-dashboard/main/docs/presentation/Presenter_Guide_v2.md",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 13445,
+      "sha256": "0367ee9b83a627a59fdb21e37db654d8ac7e0075a03dcc0b09cad9d0cb0b401c"
+    }
+  ]
+}

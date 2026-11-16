@@ -1,0 +1,160 @@
+[
+  {
+    "gallery": "docs/screenshots/dashboard-desktop.png",
+    "publicCapture": "desktop/dashboard.png",
+    "byteIdentical": true,
+    "gallerySha256": "d2119c1076f205006a6029535140dc6dfcb2735f9afac3d60d7f113ca1448efe",
+    "publicSha256": "d2119c1076f205006a6029535140dc6dfcb2735f9afac3d60d7f113ca1448efe",
+    "changedPixels": 0,
+    "totalPixels": 1296000,
+    "changedBounds": null,
+    "pixelsIdentical": true,
+    "maxChannelDifference": 0,
+    "pixelsWithChannelDifferenceOver2": 0
+  },
+  {
+    "gallery": "docs/screenshots/dashboard-laptop.png",
+    "publicCapture": "laptop/dashboard.png",
+    "byteIdentical": true,
+    "gallerySha256": "36b437f1b2ba1f7772e0f40ef9ff64401f646cb71ebb0cfd0eb72d5154bb2090",
+    "publicSha256": "36b437f1b2ba1f7772e0f40ef9ff64401f646cb71ebb0cfd0eb72d5154bb2090",
+    "changedPixels": 0,
+    "totalPixels": 1024000,
+    "changedBounds": null,
+    "pixelsIdentical": true,
+    "maxChannelDifference": 0,
+    "pixelsWithChannelDifferenceOver2": 0
+  },
+  {
+    "gallery": "docs/screenshots/dashboard-tablet.png",
+    "publicCapture": "tablet/dashboard.png",
+    "byteIdentical": true,
+    "gallerySha256": "24dadd05a58f456dbef631b8869aee0c183dd21a9d1e375ce3fc02626c317700",
+    "publicSha256": "24dadd05a58f456dbef631b8869aee0c183dd21a9d1e375ce3fc02626c317700",
+    "changedPixels": 0,
+    "totalPixels": 786432,
+    "changedBounds": null,
+    "pixelsIdentical": true,
+    "maxChannelDifference": 0,
+    "pixelsWithChannelDifferenceOver2": 0
+  },
+  {
+    "gallery": "docs/screenshots/dashboard-mobile.png",
+    "publicCapture": "mobile/dashboard-full.png",
+    "byteIdentical": true,
+    "gallerySha256": "7fca9d518deb04f31158fa477742a3d5bd8cdd790c82d250ecab89d4fa403eaa",
+    "publicSha256": "7fca9d518deb04f31158fa477742a3d5bd8cdd790c82d250ecab89d4fa403eaa",
+    "changedPixels": 0,
+    "totalPixels": 1563120,
+    "changedBounds": null,
+    "pixelsIdentical": true,
+    "maxChannelDifference": 0,
+    "pixelsWithChannelDifferenceOver2": 0
+  },
+  {
+    "gallery": "docs/screenshots/inventory-desktop.png",
+    "publicCapture": "desktop/inventory-search.png",
+    "byteIdentical": false,
+    "gallerySha256": "90bc931d157c64218e4ce865e0cb30f4b744f294d67bc003ec59a08925cb7290",
+    "publicSha256": "6a970902652a87e007b74005d4d9a2d616ee9a7f7fcf0693f8ea900e92eb6ffe",
+    "changedPixels": 11633,
+    "totalPixels": 1296000,
+    "changedBounds": {
+      "x1": 300,
+      "y1": 181,
+      "x2": 1386,
+      "y2": 754
+    },
+    "pixelsIdentical": false,
+    "maxChannelDifference": 10,
+    "pixelsWithChannelDifferenceOver2": 58
+  },
+  {
+    "gallery": "docs/screenshots/inventory-mobile.png",
+    "publicCapture": "mobile/inventory-search.png",
+    "byteIdentical": false,
+    "gallerySha256": "6ba4d6a2a33859354d753ab16cf93a17202f5e7ca44b48bdade2f41ebca08353",
+    "publicSha256": "a543f2927bd99918ed2212c7a2e3422e9b2d0eb414d9b3daad8b028a56ab4d24",
+    "changedPixels": 1276,
+    "totalPixels": 727740,
+    "changedBounds": {
+      "x1": 27,
+      "y1": 294,
+      "x2": 362,
+      "y2": 1600
+    },
+    "pixelsIdentical": false,
+    "maxChannelDifference": 3,
+    "pixelsWithChannelDifferenceOver2": 4
+  },
+  {
+    "gallery": "docs/screenshots/edit-asset-desktop.png",
+    "publicCapture": "desktop/edit-asset.png",
+    "byteIdentical": true,
+    "gallerySha256": "b4d8dff8de06db8853915c8de02b72c0083ab8199a4465fb4803bfa289c75ff8",
+    "publicSha256": "b4d8dff8de06db8853915c8de02b72c0083ab8199a4465fb4803bfa289c75ff8",
+    "changedPixels": 0,
+    "totalPixels": 1296000,
+    "changedBounds": null,
+    "pixelsIdentical": true,
+    "maxChannelDifference": 0,
+    "pixelsWithChannelDifferenceOver2": 0
+  },
+  {
+    "gallery": "docs/screenshots/edit-asset-mobile.png",
+    "publicCapture": "mobile/edit-asset.png",
+    "byteIdentical": true,
+    "gallerySha256": "160dab09123c3039ad4499d8f1dbbf973a0bc175994f1413ae4231e4992b459f",
+    "publicSha256": "160dab09123c3039ad4499d8f1dbbf973a0bc175994f1413ae4231e4992b459f",
+    "changedPixels": 0,
+    "totalPixels": 329160,
+    "changedBounds": null,
+    "pixelsIdentical": true,
+    "maxChannelDifference": 0,
+    "pixelsWithChannelDifferenceOver2": 0
+  },
+  {
+    "gallery": "docs/screenshots/security-findings.png",
+    "publicCapture": "desktop/security-findings.png",
+    "byteIdentical": true,
+    "gallerySha256": "07849cb2af32e0f30f6c4a9106e42f059cab264039a2599de2a888cb0890e465",
+    "publicSha256": "07849cb2af32e0f30f6c4a9106e42f059cab264039a2599de2a888cb0890e465",
+    "changedPixels": 0,
+    "totalPixels": 1296000,
+    "changedBounds": null,
+    "pixelsIdentical": true,
+    "maxChannelDifference": 0,
+    "pixelsWithChannelDifferenceOver2": 0
+  },
+  {
+    "gallery": "docs/screenshots/relationship-diagram.png",
+    "publicCapture": "desktop/relationship-diagram.png",
+    "byteIdentical": true,
+    "gallerySha256": "ab162e2966f76063077a961b5d51166474c2d22ca45e1998b25b2eb9f3bef24c",
+    "publicSha256": "ab162e2966f76063077a961b5d51166474c2d22ca45e1998b25b2eb9f3bef24c",
+    "changedPixels": 0,
+    "totalPixels": 1296000,
+    "changedBounds": null,
+    "pixelsIdentical": true,
+    "maxChannelDifference": 0,
+    "pixelsWithChannelDifferenceOver2": 0
+  },
+  {
+    "gallery": "docs/screenshots/asset-details.png",
+    "publicCapture": "desktop/asset-details.png",
+    "byteIdentical": false,
+    "gallerySha256": "d21239f8d2a16c2c0ad9b2e6128149fb4ffee6dc3e015a1b5024e631e1e2cf50",
+    "publicSha256": "0a620f93f7e1c845274116e725f8a9838cfd101bf3e101ae1222d4fc500c0f22",
+    "changedPixels": 4,
+    "totalPixels": 1296000,
+    "changedBounds": {
+      "x1": 1049,
+      "y1": 100,
+      "x2": 1060,
+      "y2": 100
+    },
+    "pixelsIdentical": false,
+    "maxChannelDifference": 3,
+    "pixelsWithChannelDifferenceOver2": 1
+  }
+]
