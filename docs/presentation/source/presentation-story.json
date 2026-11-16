@@ -1,0 +1,56 @@
+{
+  "targetDurationSeconds": 209,
+  "targetRange": "3:20 to 4:00",
+  "slides": [
+    {
+      "title": "Asset Security Dashboard",
+      "durationSeconds": 20,
+      "say": [
+        "Hi, I’m Ammaar, and this is my Cyber Ready Clinic capstone.",
+        "I built a dashboard that helps small organizations keep track of their devices and basic security information."
+      ]
+    },
+    {
+      "title": "Why I decided to build this",
+      "durationSeconds": 35,
+      "say": [
+        "During Discover 5 in Cyber Ready Clinic, I learned how important it is to know what devices an organization has and how they’re protected.",
+        "If that information is missing or out of date, it’s harder to tell what needs attention."
+      ]
+    },
+    {
+      "title": "What my dashboard does",
+      "durationSeconds": 25,
+      "say": [
+        "My dashboard puts device information in one place.",
+        "You can record the status of updates, security software, and backups.",
+        "Based on those records, it highlights gaps and suggests what to check next."
+      ]
+    },
+    {
+      "title": "Here’s an example",
+      "durationSeconds": 20,
+      "say": [
+        "This laptop’s record shows overdue updates, so the dashboard flags it.",
+        "Once someone confirms the updates are installed, they update the record and the recorded finding clears."
+      ]
+    },
+    {
+      "title": "Let me show you",
+      "durationSeconds": 79,
+      "say": [
+        "These are 18 fictional devices.",
+        "I’ll follow one laptop’s record."
+      ]
+    },
+    {
+      "title": "What I took away from this",
+      "durationSeconds": 30,
+      "say": [
+        "CRC taught me why it matters to know what devices you have. Building this also taught me to keep missing information visible.",
+        "The dashboard organizes what people record. It doesn’t scan devices or verify their security."
+      ],
+      "closing": "Thank you."
+    }
+  ]
+}

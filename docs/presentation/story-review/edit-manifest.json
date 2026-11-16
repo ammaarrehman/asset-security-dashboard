@@ -1,0 +1,96 @@
+{
+  "reviewedCandidate": "release/audit-remediation",
+  "reviewedCommit": "abca62d7446bf8902e38084721ca34d53704e70e",
+  "source": "../media/Demo_Recording.mp4",
+  "sourceSha256": "1954b55777deb9dad3d5d8c9e5cade487e25cb2dc3285d0da51c60fa5bcacb11",
+  "approvedDeck": "../Asset_Security_Dashboard_CRC_Capstone_v2.pptx",
+  "approvedDeckSha256": "4aa9a4b5e55dfbae8691f4dfda5ebba743cdcc20c4349f30fc85b6e8fb8310d8",
+  "alternate": "Demo_Recording_73s.mp4",
+  "alternateSha256": "575d34297172b3f73e80b7376091cb58e18263927a34d6eb7f71466fbf8e5cad",
+  "sourceDurationSeconds": 94,
+  "alternateDurationSeconds": 73,
+  "fps": 30,
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "operation": "AVFoundation H.264 passthrough, one cut, no speed change",
+  "retainedSourceFrameRangesInclusiveExclusive": [
+    [
+      0,
+      240
+    ],
+    [
+      870,
+      2820
+    ]
+  ],
+  "removedSourceFrameRangesInclusiveExclusive": [
+    [
+      240,
+      870
+    ]
+  ],
+  "cutAtAlternateFrame": 240,
+  "sourceToAlternateAfterCutOffsetFrames": -630,
+  "cues": [
+    {
+      "event": "inventoryEntrance",
+      "sourceFrame": 903,
+      "sourceSeconds": 30.1,
+      "alternateFrame": 273,
+      "alternateSeconds": 9.1
+    },
+    {
+      "event": "detailsEntrance",
+      "sourceFrame": 1162,
+      "sourceSeconds": 38.733333333333334,
+      "alternateFrame": 532,
+      "alternateSeconds": 17.733333333333334
+    },
+    {
+      "event": "editTransition",
+      "sourceFrame": 1643,
+      "sourceSeconds": 54.766666666666666,
+      "alternateFrame": 1013,
+      "alternateSeconds": 33.766666666666666
+    },
+    {
+      "event": "patchUpToDate",
+      "sourceFrame": 1764,
+      "sourceSeconds": 58.8,
+      "alternateFrame": 1134,
+      "alternateSeconds": 37.8
+    },
+    {
+      "event": "savedHealthy",
+      "sourceFrame": 1886,
+      "sourceSeconds": 62.86666666666667,
+      "alternateFrame": 1256,
+      "alternateSeconds": 41.86666666666667
+    },
+    {
+      "event": "recordReopens",
+      "sourceFrame": 2223,
+      "sourceSeconds": 74.1,
+      "alternateFrame": 1593,
+      "alternateSeconds": 53.1
+    },
+    {
+      "event": "recordCloses",
+      "sourceFrame": 2468,
+      "sourceSeconds": 82.26666666666667,
+      "alternateFrame": 1838,
+      "alternateSeconds": 61.266666666666666
+    },
+    {
+      "event": "overviewEntrance",
+      "sourceFrame": 2550,
+      "sourceSeconds": 85.0,
+      "alternateFrame": 1920,
+      "alternateSeconds": 64.0
+    }
+  ],
+  "preservedOriginals": true,
+  "embeddedVideoReplaced": false
+}

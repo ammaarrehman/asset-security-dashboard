@@ -1,5 +1,7 @@
 # Visual overhaul design review
 
+**Historical verification record:** the timings and recording references below describe the earlier audit/design state. The owner later approved the 73-second recording and final spoken wording. Current timings and integration checks are in [final presentation verification](../final-presentation/README.md) and the [current presenter guide](../../presentation/Presenter_Guide_v2.md).
+
 Status (2026-11-14): **application and slide design approved; final presentation checks complete and committed on the local `redesign/visual-overhaul` branch. Not merged, pushed, or deployed.** The public site and the original presentation are unchanged.
 
 Review sheets: [application before and after](app-review.png) · [slides before and after, with motion and demo-video frames](slides-review.png) · [live demo walkthrough](demo-walkthrough.png)

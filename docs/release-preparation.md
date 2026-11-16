@@ -1,5 +1,7 @@
 # Publication preparation
 
+**Historical preparation record:** this page describes the first publication. Use the [final release report](verification/final-release/README.md) for the redesigned application and final 73-second presentation release.
+
 Status updated 2026-11-12: **Published publicly; live deployment verification passed**. See the [redesign review](verification/redesign/README.md) for current Chromium results, accessibility diagnostics, and refreshed screenshots. The dependency audit and prior-interface results below are historical. Playwright and axe-core have since been added as pinned development tools. The owner explicitly authorized the public personal repository and GitHub Pages deployment on 2026-11-12.
 
 The intended personal repository is `ammaarrehman/asset-security-dashboard`.

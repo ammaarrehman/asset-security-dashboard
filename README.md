@@ -2,19 +2,35 @@
 
 A browser-based asset inventory for small nonprofits. Track device ownership, endpoint protection, patching, and backups in one place. The dashboard applies explicit rules to flag recorded gaps and show what still needs verification.
 
-Built as a Cyber Ready Clinic capstone. The app opens with 18 fictional nonprofit devices. The [current presentation](docs/presentation/Presenter_Guide_v2.md) is planned for about 4:35, under five minutes.
+Built as a Cyber Ready Clinic capstone. The app opens with 18 fictional nonprofit devices. The [current presentation](docs/presentation/Presenter_Guide_v2.md) has an estimated duration of approximately **3:29**, with a natural target of 3:20 to 4:00 and a hard maximum under five minutes. This is a plan, not a measured rehearsal.
 
 **[Live demo](https://ammaarrehman.github.io/asset-security-dashboard/)** · [Source code](https://github.com/ammaarrehman/asset-security-dashboard)
 
-The public demo was verified in Chromium on 12 November 2026, including inventory editing, CSV workflows, refresh persistence, and mobile layouts. [Publication verification](docs/verification/publication/README.md)
+Release checks and public verification are recorded in the [final release report](docs/verification/final-release/README.md). The [12 November publication report](docs/verification/publication/README.md) preserves the earlier public interface checks.
+
+## Why this project
+
+During Discover 5 in Cyber Ready Clinic, I learned why organizations need visibility into the devices they own and the security information recorded for each one. Missing owners, outdated records, and unknown controls make follow-up harder. This capstone explores that lesson with a fictional inventory, visible unknowns, and clear next actions. It contains no confidential client assessment data and makes no claim of client deployment or measured client outcomes.
+
+## Try the live demonstration
+
+1. Open the [live dashboard](https://ammaarrehman.github.io/asset-security-dashboard/) in a separate browser profile for a fresh fictional inventory, or choose **Reset demo** and confirm.
+2. Open **Inventory**, search for **Outreach Laptop 03**, and open its details. Review the recorded overdue patch finding and recommended action.
+3. For this fictional example, simulate that a person has installed and verified the updates. Choose **Edit asset**, change **Patch status** to **Up to date**, then save. The recorded patch finding clears. The app does not install or verify updates. Other findings depend on the saved values and current UTC review date.
+4. Explore **Unknown** records, import the [sample CSV](public/sample-assets.csv) after its confirmation preview, or export the inventory. Refresh to see browser persistence. Reset the demo when finished.
+
+The [73-second recorded demonstration](docs/presentation/story-review/Demo_Recording_73s.mp4) uses a fixed review date of 11 November 2026 so the presentation totals stay reproducible. The live app evaluates review dates using today in UTC.
 
 ## Capstone Presentation
 
-Explore the Cyber Ready Clinic capstone through six slides and a timed presenter guide, including a 94-second recorded demonstration. The planned talk is about 4:35, under five minutes. The materials use fictional nonprofit data and explain the prototype's scope and limitations. Playback and delivery should be rehearsed on the presentation computer.
+Explore the Cyber Ready Clinic capstone through six slides and a timed presenter guide, including the approved 73-second recorded demonstration. The planned talk is approximately **3:29 (estimated)**, with a target of 3:20 to 4:00 and a hard maximum under five minutes. The materials use fictional nonprofit data and explain the prototype's scope and limitations. Playback and delivery should be rehearsed on the presentation computer.
 
 - [Download the current PowerPoint (v2)](docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx)
+- [Read the final natural script](docs/presentation/story-review/Natural_Script.md)
 - [Read the current presenter guide](docs/presentation/Presenter_Guide_v2.md)
 - [View the current slide preview](docs/presentation/Slides_Preview_v2.png)
+- [Download the PDF fallback](docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf)
+- [Watch the current 73-second demonstration](docs/presentation/story-review/Demo_Recording_73s.mp4)
 - [Open the live application](https://ammaarrehman.github.io/asset-security-dashboard/)
 
 The [presentation kit](docs/presentation/README.md) includes the recording, PDF fallback, and live-demo QR code. Archived originals remain available: [PowerPoint](docs/presentation/Asset_Security_Dashboard_CRC_Capstone.pptx), [guide](docs/presentation/Presenter_Guide.md), [preview](docs/presentation/Slides_Preview.png), and [outline](docs/capstone-outline.md). Their earlier timing is not the current under-five-minute plan. See [future improvement ideas](docs/future-improvements.md) for optional work beyond this presentation.
@@ -95,7 +111,7 @@ React, strict TypeScript, Vite, Tailwind CSS, Lucide, Vitest, and browser LocalS
 
 Records stay in the current browser profile and site origin. Scripts on the same origin can access them. Records aren’t automatically shared with other users or devices. Clearing site data removes saved records. If storage is blocked, full, or unreadable, the app warns you and keeps session changes in memory so you can export them before leaving. CSV files are plain text.
 
-This educational prototype evaluates manually entered records. It performs no device scanning, control verification, or compliance assessment. It has no authentication, server, or shared inventory. Use fictional or otherwise appropriate demonstration data.
+This browser-only educational prototype evaluates manually entered records using deterministic hygiene rules. It **does not scan real devices, install security updates, independently verify security controls, prove compliance, or synchronize inventories across users**. It has no authentication or server. Use fictional demonstration data; do not enter confidential client assessment information.
 
 ## Testing and production build
 
@@ -113,7 +129,7 @@ On macOS, `npm run qa:visual` builds the production app and uses Playwright Chro
 
 Failures produce a nonzero exit status and `results.json` in the chosen output folder. Replacing committed captures, galleries, comparison images and the ZIP requires the explicit `--update-gallery` option (`npm run qa:update-gallery`) and happens only after browser assertions pass. Output under `docs/` is rejected without that option. The [earlier approved report](docs/verification/visual-overhaul/chromium/results.json) remains available. Inspect generated images after each run. Automated checks do not establish complete accessibility conformance or replace assistive-technology testing.
 
-GitHub Actions runs a clean install, lint, tests, TypeScript checks, and the production build on every push to `main`, then deploys `dist/` to GitHub Pages. The workflow also supports manual dispatch and serializes deployments. [Deployment runs](https://github.com/ammaarrehman/asset-security-dashboard/actions/workflows/deploy-pages.yml)
+GitHub Actions runs a clean install, lint, tests, TypeScript checks, and the production build on pull requests targeting `main` and on every push to `main`. Only main builds deploy `dist/` to GitHub Pages. The workflow also supports manual dispatch and serializes deployments. [Deployment runs](https://github.com/ammaarrehman/asset-security-dashboard/actions/workflows/deploy-pages.yml)
 
 To run the same browser suite against the public deployment without changing the screenshot gallery:
 

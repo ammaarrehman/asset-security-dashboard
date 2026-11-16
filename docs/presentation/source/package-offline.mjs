@@ -18,7 +18,8 @@ const output = path.join(kit, 'Offline_Presentation_Package_v2.zip')
 const files = [
   ['Asset_Security_Dashboard_CRC_Capstone_v2.pptx', path.join(kit, 'Asset_Security_Dashboard_CRC_Capstone_v2.pptx')], // demo video embedded
   ['Asset_Security_Dashboard_CRC_Capstone_v2.pdf', path.join(kit, 'Asset_Security_Dashboard_CRC_Capstone_v2.pdf')], // static fallback
-  ['Demo_Recording.mp4', path.join(kit, 'media/Demo_Recording.mp4')], // plays in QuickTime if the deck's video won't
+  ['story-review/Demo_Recording_73s.mp4', path.join(kit, 'story-review/Demo_Recording_73s.mp4')], // plays in QuickTime if the deck's video won't
+  ['story-review/Natural_Script.md', path.join(kit, 'story-review/Natural_Script.md')],
   ['Presenter_Guide_v2.md', path.join(kit, 'Presenter_Guide_v2.md')],
   ['Slides_Preview_v2.png', path.join(kit, 'Slides_Preview_v2.png')],
   ['Live_Demo_QR_v2.png', path.join(kit, 'Live_Demo_QR_v2.png')],
@@ -31,10 +32,13 @@ const deck = await JSZip.loadAsync(await fs.readFile(files[0][1]))
 const embedded = Object.keys(deck.files).filter((name) => name.startsWith('ppt/media/') && name.endsWith('.mp4'))
 assert.equal(embedded.length, 1, 'Expected exactly one embedded video')
 assert.equal(createHash('sha256').update(await deck.file(embedded[0]).async('nodebuffer')).digest('hex'), await sha(files[2][1]),
-  'The video inside the deck differs from media/Demo_Recording.mp4')
+  'The video inside the deck differs from story-review/Demo_Recording_73s.mp4')
 
 const stage = await fs.mkdtemp(path.join(os.tmpdir(), 'asd-offline-'))
-for (const [name, source] of files) await fs.copyFile(source, path.join(stage, name))
+for (const [name, source] of files) {
+  await fs.mkdir(path.dirname(path.join(stage, name)), { recursive: true })
+  await fs.copyFile(source, path.join(stage, name))
+}
 await fs.rm(output, { force: true })
 execFileSync('/usr/bin/zip', ['-q', '-X', output, ...files.map(([name]) => name)], { cwd: stage })
 await fs.rm(stage, { recursive: true, force: true })
@@ -42,7 +46,9 @@ await fs.rm(stage, { recursive: true, force: true })
 // Unpack into an empty folder and compare every file with its source.
 const check = await fs.mkdtemp(path.join(os.tmpdir(), 'asd-offline-check-'))
 execFileSync('/usr/bin/unzip', ['-q', output, '-d', check])
-assert.deepEqual((await fs.readdir(check)).sort(), files.map(([name]) => name).sort())
+const unpacked = (await fs.readdir(check, { recursive: true, withFileTypes: true }))
+  .filter((entry) => entry.isFile()).map((entry) => path.relative(check, path.join(entry.parentPath, entry.name)))
+assert.deepEqual(unpacked.sort(), files.map(([name]) => name).sort())
 for (const [name, source] of files) assert.equal(await sha(path.join(check, name)), await sha(source), name + ' differs after unpacking')
 await fs.rm(check, { recursive: true, force: true })
 const { size } = await fs.stat(output)

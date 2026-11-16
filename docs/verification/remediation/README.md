@@ -1,5 +1,7 @@
 # Targeted audit remediation — 14 November 2026
 
+**Historical verification record:** the timings and recording references below describe the earlier audit/design state. The owner later approved the 73-second recording and final spoken wording. Current timings and integration checks are in [final presentation verification](../final-presentation/README.md) and the [current presenter guide](../../presentation/Presenter_Guide_v2.md).
+
 Local work only. The approved visual design, six-slide wording, 94-second recording,
 fictional dataset, security rules, original presentation and existing galleries are preserved.
 No public main update, push, merge or deployment is authorized by these checks.

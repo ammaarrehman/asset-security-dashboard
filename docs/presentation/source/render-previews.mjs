@@ -18,7 +18,10 @@ const { chromium } = require('playwright')
 const previous = process.argv[2] && path.resolve(process.argv[2])
 const beforeLabel = process.argv[3] || 'the previous render'
 const url = (file) => pathToFileURL(file).href
-const titles = ['Introduction · 25 s', 'Why I built it · 40 s', 'What it does · 40 s', 'Example · 40 s', 'Demo · 1:40 with the 94 s video', 'What I took away · 30 s']
+const story = JSON.parse(await fs.readFile(path.join(here, 'presentation-story.json'), 'utf8'))
+const clock = (seconds) => `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`
+const titles = ['Introduction', 'Why I built it', 'What it does', 'Example', 'Demo', 'What I took away']
+  .map((label, index) => `${label} · ${index === 4 ? clock(story.slides[index].durationSeconds) + ' with the 73 s video' : story.slides[index].durationSeconds + ' s'}`)
 const slide = (n) => path.join(kit, 'slides', `Slide_0${n}.png`)
 
 const page = (body, width) => `<!doctype html><meta charset="utf-8"><style>
@@ -51,7 +54,7 @@ async function sheet(html, width, file) {
 }
 
 await sheet(page(`<h1>Asset Security Dashboard · capstone deck v2</h1>
-  <p class="sub">Six slides, about 4 minutes 35 seconds · Keynote renders of the PowerPoint file · fictional demo data</p>
+  <p class="sub">Six slides, about 3 minutes 30 seconds · Keynote renders of the PowerPoint file · fictional demo data</p>
   <div class="tiles" style="grid-template-columns: repeat(3, 1fr)">${titles.map((t, i) => `<figure><figcaption><b>${i + 1}</b>${t}</figcaption><img src="${url(slide(i + 1))}"></figure>`).join('')}</div>`, 2400),
 2400, path.join(kit, 'Slides_Preview_v2.png'))
 
@@ -63,7 +66,7 @@ const steps = [
   [5, 'Saved: the laptop is Healthy, findings drop to 12'],
   [6, 'Details again: 0 findings from this record'],
 ]
-await sheet(page(`<h1>Live demo walkthrough</h1>
+if (process.env.PRESENTATION_WALKTHROUGH === '1') await sheet(page(`<h1>Live demo walkthrough</h1>
   <p class="sub">Real captures of the production build, made by demo-walkthrough.mjs, which also checks every count · fixed date 2026-11-11</p>
   <div class="tiles" style="grid-template-columns: repeat(2, 1fr)">${steps.map(([n, t]) => `<figure><figcaption><b>Step ${n}</b>${t}</figcaption><img src="${url(path.join(kit, 'media', `Demo_Step_${n}.png`))}"></figure>`).join('')}</div>`, 2400),
 2400, path.join(review, 'demo-walkthrough.png'))
@@ -71,15 +74,15 @@ await sheet(page(`<h1>Live demo walkthrough</h1>
 if (previous) {
   // Real frames from the recorded demo, pulled from the MP4 itself.
   const frames = await fs.mkdtemp(path.join(os.tmpdir(), 'asd-video-frames-'))
-  const moments = [['0:01', 1, '18 fictional devices'], ['0:15', 15, 'Priority follow-ups'], ['0:40', 40, 'Overdue patch finding, magnified'], ['0:59', 59.5, 'Patch status set to Up to date, magnified'], ['1:06', 66, 'Healthy, findings 12'], ['1:33', 93, 'Overview after the change']]
-  execFileSync('swift', ['-suppress-warnings', path.join(here, 'video-frames.swift'), path.join(kit, 'media/Demo_Recording.mp4'), frames, ...moments.map(([, t]) => String(t))], { stdio: 'ignore' })
+  const moments = [['0:01', 1, '18 fictional devices'], ['0:18', 18, 'Overdue laptop record'], ['0:35', 35, 'Patch status before the change'], ['0:38', 38.5, 'Patch status set to Up to date'], ['0:45', 45, 'Healthy result'], ['1:10', 70, 'Overview after the change']]
+  execFileSync('swift', ['-suppress-warnings', path.join(here, 'video-frames.swift'), path.join(kit, 'story-review/Demo_Recording_73s.mp4'), frames, ...moments.map(([, t]) => String(t))], { stdio: 'ignore' })
   const frame = (t) => path.join(frames, `frame-${t.toFixed(2).padStart(6, '0')}.png`)
   const rows = titles.map((t, i) => `<figure><figcaption><i>Before</i>Slide ${i + 1}</figcaption><img src="${url(path.join(previous, `Slide_0${i + 1}.png`))}"></figure>
     <figure><figcaption><b>After</b>${t}</figcaption><img src="${url(slide(i + 1))}"></figure>`).join('')
   await sheet(page(`<h1>Asset Security Dashboard · deck v2, presentation design revision</h1>
-    <p class="sub">Before: ${beforeLabel} · After: each slide built around one subject, with no running footer, slide numbers, numbered labels, or decorative frames · same palette, texture, screenshots, and recorded demo · both rendered in Keynote · the original deck is unchanged</p>
+    <p class="sub">Before: ${beforeLabel} · After: final natural wording and the preferred 73-second recording · approved layout, palette, texture, and screenshots preserved · both rendered in Keynote · the original deck is unchanged</p>
     <div class="tiles" style="grid-template-columns: repeat(2, 1fr)">${rows}</div>
-    <h2>Recorded demo on slide 5 (Demo_Recording.mp4, 94 s, 1920 × 1080, real browser session; key moments magnified for the projector)</h2>
+    <h2>Recorded demo on slide 5 (Demo_Recording_73s.mp4, 73 s, 1920 × 1080, real browser session; key moments magnified for the projector)</h2>
     <div class="tiles" style="grid-template-columns: repeat(3, 1fr)">${moments.map(([at, t, label]) => `<figure><figcaption><b>${at}</b>${label}</figcaption><img src="${url(frame(t))}"></figure>`).join('')}</div>`, 2400),
   2400, path.join(review, 'slides-review.png'))
   await fs.rm(frames, { recursive: true, force: true })

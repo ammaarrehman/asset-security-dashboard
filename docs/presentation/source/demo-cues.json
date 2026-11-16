@@ -1,17 +1,74 @@
 {
-  "videoSha256": "1954b55777deb9dad3d5d8c9e5cade487e25cb2dc3285d0da51c60fa5bcacb11",
-  "durationSeconds": 94,
+  "videoPath": "story-review/Demo_Recording_73s.mp4",
+  "videoSha256": "575d34297172b3f73e80b7376091cb58e18263927a34d6eb7f71466fbf8e5cad",
+  "durationSeconds": 73,
+  "archivePath": "media/Demo_Recording.mp4",
+  "archiveSha256": "1954b55777deb9dad3d5d8c9e5cade487e25cb2dc3285d0da51c60fa5bcacb11",
   "cues": [
-    { "time": "0:00", "screen": "Overview: 18 total assets, 13 findings", "say": "(the slide text above)" },
-    { "time": "0:12", "screen": "Priority follow-ups", "say": "These are the devices that need attention first." },
-    { "time": "0:31", "screen": "Inventory opens", "say": "I'll open the inventory." },
-    { "time": "0:34", "screen": "Typing Outreach", "say": "I'll search for Outreach Laptop 03." },
-    { "time": "0:39", "screen": "The laptop's details, magnified: Patch status Overdue, finding Patches overdue", "say": "Its updates are overdue, so there's a finding and a suggested fix." },
-    { "time": "0:55", "screen": "Edit asset, magnified on Patch status", "say": "In real life, someone installs the updates first. Then they change the record." },
-    { "time": "0:59", "screen": "Patch status changes to Up to date, then Save changes", "say": "(continue the previous line)" },
-    { "time": "1:03", "screen": "The laptop shows Healthy; findings drop from 13 to 12", "say": "Now the laptop shows Healthy, and the findings went from 13 to 12." },
-    { "time": "1:15", "screen": "The record reopens with 0 findings", "say": "(pause and point at the cleared finding)" },
-    { "time": "1:26", "screen": "Back on the overview: 10 healthy, 5 need attention", "say": "The overview updates too." },
-    { "time": "1:34", "screen": "Video ends", "say": "Move to slide 6." }
+    {
+      "time": "0:00",
+      "screen": "Overview: 18 total assets, 13 findings",
+      "say": "(the slide text above)"
+    },
+    {
+      "time": "0:09",
+      "screen": "Inventory opens",
+      "say": "I'll open the inventory and search for Outreach Laptop 03."
+    },
+    {
+      "time": "0:13",
+      "screen": "Searching for Outreach",
+      "say": "(pause while the search completes)"
+    },
+    {
+      "time": "0:18",
+      "screen": "Laptop details: Patch status Overdue, finding Patches overdue",
+      "say": "Its record says updates are overdue. That creates a finding."
+    },
+    {
+      "time": "0:25",
+      "screen": "The recommended action remains visible",
+      "say": "The next step is to install the updates and check that they worked."
+    },
+    {
+      "time": "0:34",
+      "screen": "Edit asset, magnified on Patch status",
+      "say": "Then I change Patch status to Up to date and save the record."
+    },
+    {
+      "time": "0:38",
+      "screen": "Patch status changes to Up to date",
+      "say": "(continue the previous line)"
+    },
+    {
+      "time": "0:42",
+      "screen": "Save completes and the laptop shows Healthy",
+      "say": "The laptop now shows Healthy."
+    },
+    {
+      "time": "0:48",
+      "screen": "Security findings badge shows 12",
+      "say": "The total findings have dropped from thirteen to twelve."
+    },
+    {
+      "time": "0:54",
+      "screen": "The reopened record shows Healthy and 0 findings",
+      "say": "The record now has zero findings. That means no gaps are recorded."
+    },
+    {
+      "time": "1:01",
+      "screen": "The record closes and navigation returns to Overview",
+      "say": "(pause while the overview opens)"
+    },
+    {
+      "time": "1:04",
+      "screen": "Overview: 18 total, 10 healthy, 5 need attention, 3 unknown",
+      "say": "The overview updates too. The other devices still need follow-up."
+    },
+    {
+      "time": "1:13",
+      "screen": "Video ends",
+      "say": "Move to slide 6."
+    }
   ]
 }

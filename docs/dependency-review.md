@@ -35,3 +35,14 @@ The production-only audit reports **zero vulnerabilities**. Full audit results r
 seven moderate entries, zero high and zero critical; seven entries do not represent
 seven independent vulnerabilities. Remediation and release-candidate audit reports are
 retained with the temporary verification evidence identified in the final handoff.
+
+
+## Final release recheck — 16 November 2026
+
+A fresh locked install and registry audit confirmed the same seven moderate app-development entries and zero production app vulnerabilities. No app dependencies changed.
+
+The separate `docs/presentation/source` install reports **two high advisory entries**: `image-size` 1.2.1 and its dependent `pptxgenjs` 4.0.1. They represent parser denial-of-service advisories [GHSA-5p2g-fcmc-qvqq](https://github.com/advisories/GHSA-5p2g-fcmc-qvqq) and [GHSA-w3rx-r6r6-pgpr](https://github.com/advisories/GHSA-w3rx-r6r6-pgpr) for crafted JXL, HEIF, or ICNS images. This is presentation authoring tooling, absent from the browser app and from the delivered PPTX/PDF/video runtime.
+
+The generator imports the package's ESM entry. Inspection of that installed entry found no `image-size` import or require. The generator supplies reviewed repository PNG files, explicit dimensions, and data-URI PNG posters; it accepts no uploaded or remote images. Offline packaging uses JSZip rather than the image parser. This makes the reported parser path nonblocking for publishing these already generated, hash-verified artifacts. It does not make the dependency patched or safe for arbitrary future inputs.
+
+The current `pptxgenjs` release still declares `image-size ^1.2.1`; patched image-size 2.x is outside that range. npm proposes a generator downgrade to 4.0.0. Retained the approved generator pins rather than applying a cross-major override or unverified downgrade during release. Review an upstream-compatible fix before expanding authoring inputs. Only repository-controlled assets should be used in the meantime. Audit JSON is retained in the final release verification folder.

@@ -1,0 +1,562 @@
+[
+  {
+    "file": "docs/presentation/story-review/Story_and_Pacing_Review.md",
+    "target": "Demo_Recording_73s.mp4",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/story-review/Story_and_Pacing_Review.md",
+    "target": "frame-verification.json",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/story-review/Story_and_Pacing_Review.md",
+    "target": "edit-manifest.json",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/story-review/Story_and_Pacing_Review.md",
+    "target": "Natural_Script.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "../final-release/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "../../presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "../../presentation/Slides_Preview_v2.png",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "../../presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "../../presentation/story-review/Natural_Script.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "../../presentation/Presenter_Guide_v2.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "../../presentation/story-review/Demo_Recording_73s.mp4",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "../../presentation/media/Demo_Recording.mp4",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-presentation/README.md",
+    "target": "checks.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "local-chromium-results.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "deck-validation.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "media-pdf.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "rendered-qr.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "offline-payload-hashes.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "relative-links.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "preservation.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "gitleaks-files.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "gitleaks-history.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "production-audit.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "dependency-audit.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "presentation-dependency-audit.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/final-release/README.md",
+    "target": "../../dependency-review.md",
+    "exists": true
+  },
+  {
+    "file": "PROGRESS.md",
+    "target": "docs/verification/remediation/README.md",
+    "exists": true
+  },
+  {
+    "file": "PROGRESS.md",
+    "target": "docs/dependency-review.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/Presenter_Guide_v2.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/verification/final-release/README.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/verification/publication/README.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "public/sample-assets.csv",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/story-review/Demo_Recording_73s.mp4",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pptx",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/story-review/Natural_Script.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/Presenter_Guide_v2.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/Slides_Preview_v2.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/Asset_Security_Dashboard_CRC_Capstone_v2.pdf",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/story-review/Demo_Recording_73s.mp4",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/README.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/Asset_Security_Dashboard_CRC_Capstone.pptx",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/Presenter_Guide.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/presentation/Slides_Preview.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/capstone-outline.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/future-improvements.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/verification/visual-overhaul/README.md",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/visual-review.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/asset-security-dashboard-screenshots.zip",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/dashboard-desktop.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/relationship-diagram.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/inventory-desktop.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/dashboard-laptop.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/asset-details.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/edit-asset-desktop.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/security-findings.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/dashboard-tablet.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/dashboard-mobile.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/inventory-mobile.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/screenshots/edit-asset-mobile.png",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "public/sample-assets.csv",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "docs/verification/visual-overhaul/chromium/results.json",
+    "exists": true
+  },
+  {
+    "file": "README.md",
+    "target": "LICENSE",
+    "exists": true
+  },
+  {
+    "file": "docs/capstone-outline.md",
+    "target": "presentation/Presenter_Guide_v2.md",
+    "exists": true
+  },
+  {
+    "file": "docs/capstone-outline.md",
+    "target": "presentation/story-review/Natural_Script.md",
+    "exists": true
+  },
+  {
+    "file": "docs/capstone-outline.md",
+    "target": "presentation/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/capstone-outline.md",
+    "target": "../public/sample-assets.csv",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/Presenter_Guide.md",
+    "target": "../future-improvements.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/Presenter_Guide_v2.md",
+    "target": "story-review/Demo_Recording_73s.mp4",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/Presenter_Guide_v2.md",
+    "target": "story-review/Natural_Script.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "../verification/final-release/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Asset_Security_Dashboard_CRC_Capstone_v2.pptx",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "story-review/Demo_Recording_73s.mp4",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "story-review/Natural_Script.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "media/Demo_Recording.mp4",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Presenter_Guide_v2.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Slides_Preview_v2.png",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Asset_Security_Dashboard_CRC_Capstone_v2.pdf",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Live_Demo_QR_v2.png",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Asset_Security_Dashboard_CRC_Capstone.pptx",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Presenter_Guide.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Slides_Preview.png",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "Live_Demo_QR.png",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "../../public/sample-assets.csv",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "../verification/final-presentation/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "story-review/Story_and_Pacing_Review.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "../../README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "../capstone-outline.md",
+    "exists": true
+  },
+  {
+    "file": "docs/presentation/README.md",
+    "target": "../future-improvements.md",
+    "exists": true
+  },
+  {
+    "file": "docs/release-preparation.md",
+    "target": "verification/final-release/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/release-preparation.md",
+    "target": "verification/redesign/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/release-preparation.md",
+    "target": "verification/publication/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/publication/README.md",
+    "target": "dependency-audit.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/publication/README.md",
+    "target": "production-dependency-audit.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/publication/README.md",
+    "target": "../../release-preparation.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/publication/README.md",
+    "target": "chromium-results.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/publication/README.md",
+    "target": "http-readme-results.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/publication/README.md",
+    "target": "gallery-comparison.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/redesign/README.md",
+    "target": "chromium/results.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/redesign/README.md",
+    "target": "../../screenshots/visual-review.png",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/redesign/README.md",
+    "target": "../../screenshots/asset-security-dashboard-screenshots.zip",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/remediation/README.md",
+    "target": "../final-presentation/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/remediation/README.md",
+    "target": "../../presentation/Presenter_Guide_v2.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/remediation/README.md",
+    "target": "../../dependency-review.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "../final-presentation/README.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "../../presentation/Presenter_Guide_v2.md",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "app-review.png",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "slides-review.png",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "demo-walkthrough.png",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "slides-review.png",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "chromium/results.json",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "slides-review.png",
+    "exists": true
+  },
+  {
+    "file": "docs/verification/visual-overhaul/README.md",
+    "target": "../../presentation/Presenter_Guide_v2.md#video-playback-check-once-on-the-computer-you-will-present-from",
+    "exists": true
+  }
+]
