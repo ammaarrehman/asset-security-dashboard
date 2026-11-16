@@ -1,0 +1,24 @@
+{
+  "name": "asset-security-dashboard-presentation",
+  "private": true,
+  "description": "Build tooling for the capstone PowerPoint. Kept separate from the application's dependencies.",
+  "type": "module",
+  "scripts": {
+    "build": "node build-deck.mjs && python3 validate-deck.py",
+    "validate": "python3 validate-deck.py",
+    "motion": "node render-motion.mjs ./.frames",
+    "icons": "node render-icons.mjs",
+    "record": "node record-demo.mjs",
+    "walkthrough": "node demo-walkthrough.mjs",
+    "previews": "node render-previews.mjs",
+    "package": "node package-offline.mjs",
+    "status-fields": "node capture-status-fields.mjs"
+  },
+  "dependencies": {
+    "jsqr": "1.4.0",
+    "jszip": "3.10.1",
+    "pngjs": "7.0.0",
+    "pptxgenjs": "4.0.1",
+    "qrcode": "1.5.4"
+  }
+}

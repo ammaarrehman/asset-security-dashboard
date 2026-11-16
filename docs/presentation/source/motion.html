@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Presentation motion graphics</title>
+<!-- Original motion graphics for the capstone deck. Open with ?scene=trace or ?scene=status.
+     Every relationship drawn here mirrors the app's data model and the fictional demo inventory. -->
+<style>
+  @font-face { font-family: "IBM Plex Sans"; font-weight: 400; src: url("../fonts/IBMPlexSans-Regular.ttf"); }
+  @font-face { font-family: "IBM Plex Sans"; font-weight: 700; src: url("../fonts/IBMPlexSans-Bold.ttf"); }
+  @font-face { font-family: "IBM Plex Mono"; font-weight: 400; src: url("../fonts/IBMPlexMono-Regular.ttf"); }
+  html, body { margin: 0; background: #12171a; }
+  svg { display: block; font-family: "IBM Plex Sans", sans-serif; }
+  .mono { font-family: "IBM Plex Mono", monospace; }
+</style>
+<body>
+<script>
+// The refined palette: restrained teal on graphite. The canvas is the panel color so a clip reads as a framed instrument.
+const C = { bg: '#12171a', panel: '#0d1113', surface: '#192024', line: '#33403f', dim: '#3a4a4a', text: '#e4e7e1', text2: '#b3bab5', text3: '#8e9894', cyan: '#7db8ad', amber: '#d8aa64', slate: '#a3adc0', on: '#182826' }
+const NS = 'http://www.w3.org/2000/svg'
+const el = (name, attrs = {}, text) => { const node = document.createElementNS(NS, name); for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, v); if (text != null) node.textContent = text; return node }
+const clamp = v => Math.max(0, Math.min(1, v))
+const ease = v => 1 - Math.pow(1 - clamp(v), 3)
+const mix = (a, b, p) => { const h = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16)); const [x, y] = [h(a), h(b)]; return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * p).toString(16).padStart(2, '0')).join('') }
+const steps = []   // functions of time
+const scene = new URLSearchParams(location.search).get('scene') || 'trace'
+
+function box(svg, { x, y, w, h, label, sub, count, at, hot }) {
+  const g = el('g'); svg.append(g)
+  const rect = el('rect', { x, y, width: w, height: h, rx: 3, fill: C.surface, stroke: C.line, 'stroke-width': 1.5 }); g.append(rect)
+  const title = el('text', { x: x + 16, y: y + (sub ? h / 2 - 3 : h / 2 + 7), fill: C.text, 'font-size': 20, 'font-weight': 700 }, label); g.append(title)
+  if (sub) g.append(el('text', { x: x + 16, y: y + h / 2 + 22, fill: C.text3, 'font-size': 16, class: 'mono' }, sub))
+  let badge
+  if (count != null) { badge = el('text', { x: x + w - 16, y: y + h / 2 + 7, fill: C.text2, 'font-size': 20, 'text-anchor': 'end', class: 'mono' }, count); g.append(badge) }
+  steps.push(t => {
+    const p = ease((t - at) / .5)
+    g.setAttribute('opacity', p); g.setAttribute('transform', `translate(0 ${(1 - p) * 10})`)
+    const glow = hot == null ? 0 : ease((t - hot) / .5)
+    rect.setAttribute('stroke', mix(C.line, C.cyan, glow)); rect.setAttribute('fill', mix(C.surface, C.on, glow)); rect.setAttribute('stroke-width', 1.5 + glow)
+    if (badge) badge.setAttribute('fill', mix(C.text2, C.cyan, glow))
+  })
+  return { x, y, w, h }
+}
+function link(svg, a, b, { at, hot, ay = 0, by = 0 }) {
+  const x1 = a.x + a.w, y1 = a.y + a.h / 2 + ay, x2 = b.x, y2 = b.y + b.h / 2 + by, bend = (x2 - x1) / 2
+  const d = `M${x1} ${y1}C${x1 + bend} ${y1} ${x2 - bend} ${y2} ${x2} ${y2}`
+  const base = el('path', { d, fill: 'none', stroke: C.dim, 'stroke-width': 1.75, pathLength: 1, 'stroke-dasharray': 1 })
+  const top = el('path', { d, fill: 'none', stroke: C.cyan, 'stroke-width': 3, pathLength: 1, 'stroke-dasharray': 1, 'stroke-linecap': 'round' })
+  svg.prepend(top); svg.prepend(base)
+  steps.push(t => {
+    base.setAttribute('stroke-dashoffset', 1 - ease((t - at) / .9))
+    top.setAttribute('stroke-dashoffset', hot == null ? 1 : 1 - ease((t - hot) / .6))
+  })
+}
+function heading(svg, x, index, label, at) {
+  const g = el('g'); svg.append(g)
+  g.append(el('text', { x, y: 0, fill: C.cyan, 'font-size': 17, class: 'mono' }, index))
+  g.append(el('text', { x: x + 34, y: 0, fill: C.text, 'font-size': 21, 'font-weight': 700 }, label))
+  steps.push(t => g.setAttribute('opacity', ease((t - at) / .5)))
+  return g
+}
+
+function trace() {
+  const W = 1280, H = 860
+  const svg = el('svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}` }); document.body.append(svg)
+  svg.append(el('rect', { width: W, height: H, fill: C.bg }))
+  const dots = el('g', { fill: '#283330' }); svg.append(dots)
+  for (let x = 20; x < W; x += 40) for (let y = 20; y < H; y += 40) dots.append(el('circle', { cx: x, cy: y, r: 1.5 }))
+  const layer = el('g'); svg.append(layer)
+  const cols = [40, 292, 588, 908], widths = [176, 232, 262, 332]
+  ;['Assets', 'Recorded controls', 'Findings', 'Next actions'].forEach((label, i) =>
+    heading(layer, cols[i], '0' + (i + 1), label, i * .35).setAttribute('transform', 'translate(0 150)'))
+  const column = (i, items, top, gap, h, at, hotKeys, hotAt) => Object.fromEntries(items.map(([key, label, sub, count], n) =>
+    [key, box(layer, { x: cols[i], y: top + n * (h + gap), w: widths[i], h, label, sub, count, at: at + n * .06, hot: hotKeys.includes(key) ? hotAt : null })]))
+  const types = column(0, [['Laptop', 'Laptop', null, 6], ['Desktop', 'Desktop', null, 4], ['Mobile', 'Mobile', null, 3], ['Server', 'Server', null, 2], ['Network', 'Network', null, 2], ['Other', 'Other', null, 1]], 205, 16, 62, .1, ['Laptop', 'Desktop', 'Network'], 4.3)
+  const records = column(1, [['endpoint', 'Endpoint protection', 'endpoint_protection'], ['patch', 'Patch status', 'patch_status'], ['backup', 'Backup status', 'backup_status'], ['reviewed', 'Last reviewed', 'last_reviewed']], 215, 24, 92, .45, ['patch'], 4.6)
+  const cats = column(2, [['endpoint', 'Endpoint protection', null, 1], ['patch', 'Patch management', null, 3], ['backup', 'Backup readiness', null, 3], ['missing', 'Missing information', null, 3], ['review', 'Review recency', null, 3]], 205, 19, 78, .8, ['patch'], 4.9)
+  const acts = column(3, [['endpoint', 'Enable protection'], ['patch', 'Schedule security updates'], ['backup', 'Enable backups, test restore'], ['missing', 'Verify the unknowns'], ['review', 'Review, record the date']], 205, 19, 78, 1.15, ['patch'], 5.2)
+  // Device type -> recorded field, for fields behind a current finding in the fictional demo inventory.
+  const typeLinks = { Laptop: ['endpoint', 'patch', 'backup'], Desktop: ['patch', 'backup', 'reviewed'], Mobile: ['endpoint', 'backup', 'reviewed'], Server: ['endpoint', 'reviewed'], Network: ['patch'] }
+  Object.entries(typeLinks).forEach(([type, keys], n) => keys.forEach((key, k) =>
+    link(layer, types[type], records[key], { at: 1.3 + n * .08, hot: key === 'patch' ? 4.3 : null, ay: (k - (keys.length - 1) / 2) * 10, by: (n - 2) * 8 })))
+  // The seven rule paths in security.ts.
+  ;[['endpoint', 'endpoint'], ['endpoint', 'missing'], ['patch', 'patch'], ['patch', 'missing'], ['backup', 'backup'], ['backup', 'missing'], ['reviewed', 'review']]
+    .forEach(([from, to], n) => link(layer, records[from], cats[to], { at: 2.2 + n * .06, hot: from === 'patch' && to === 'patch' ? 4.7 : null, ay: from === to || to === 'review' ? -8 : 10, by: to === 'missing' ? (n - 3) * 6 : 0 }))
+  Object.keys(cats).forEach((key, n) => link(layer, cats[key], acts[key], { at: 3 + n * .06, hot: key === 'patch' ? 5 : null }))
+  const note = el('text', { x: 40, y: 80, fill: C.text3, 'font-size': 18, class: 'mono' }, 'RELATIONSHIP DIAGRAM  ·  RECORDED DATA, NOT A NETWORK SCAN'); layer.append(note)
+  const foot = el('text', { x: 40, y: 800, fill: C.text2, 'font-size': 20 }, 'Highlighted: patch status recorded as Overdue on 3 of 18 fictional devices'); layer.append(foot)
+  steps.push(t => foot.setAttribute('opacity', ease((t - 5.2) / .6)))
+  return 6.4
+}
+
+function status() {
+  const W = 1600, H = 560
+  const svg = el('svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}` }); document.body.append(svg)
+  svg.append(el('rect', { width: W, height: H, fill: C.bg }))
+  const card = (x, w, kicker) => {
+    const g = el('g'); svg.append(g)
+    const rect = el('rect', { x, y: 70, width: w, height: 330, rx: 3, fill: C.panel, stroke: C.line, 'stroke-width': 1.5 }); g.append(rect)
+    g.append(el('text', { x: x + 32, y: 122, fill: C.text3, 'font-size': 19, class: 'mono' }, kicker))
+    return { g, rect, x, w }
+  }
+  const record = card(40, 560, 'DEVICE RECORD')
+  record.g.append(el('text', { x: 72, y: 178, fill: C.text, 'font-size': 36, 'font-weight': 700 }, 'Outreach Laptop 03'))
+  record.g.append(el('text', { x: 72, y: 216, fill: C.text3, 'font-size': 21 }, 'Laptop · Outreach · fictional demo device'))
+  const chip = el('rect', { x: 72, y: 262, width: 496, height: 66, rx: 3, fill: C.bg, 'stroke-width': 2 }); record.g.append(chip)
+  record.g.append(el('text', { x: 94, y: 304, fill: C.text3, 'font-size': 23, class: 'mono' }, 'patch_status'))
+  const before = el('text', { x: 546, y: 304, 'font-size': 25, 'font-weight': 700, 'text-anchor': 'end', fill: C.amber }, 'Overdue'); record.g.append(before)
+  const after = el('text', { x: 546, y: 304, 'font-size': 25, 'font-weight': 700, 'text-anchor': 'end', fill: C.cyan }, 'Up to date'); record.g.append(after)
+  const verify = el('text', { x: 72, y: 370, fill: C.text2, 'font-size': 20 }, 'A person verifies the update, then edits the record'); record.g.append(verify)
+
+  const d = 'M600 295 L1000 295'
+  const base = el('path', { d, stroke: C.dim, 'stroke-width': 2, pathLength: 1, 'stroke-dasharray': 1, fill: 'none' }); svg.append(base)
+  const pulse = el('path', { d, stroke: C.cyan, 'stroke-width': 4, 'stroke-linecap': 'round', pathLength: 1, 'stroke-dasharray': '.18 1', fill: 'none' }); svg.append(pulse)
+  const rule = el('g'); svg.append(rule)
+  rule.append(el('rect', { x: 690, y: 262, width: 220, height: 66, rx: 4, fill: C.surface, stroke: C.line, 'stroke-width': 1.5 }))
+  rule.append(el('text', { x: 800, y: 303, fill: C.text, 'font-size': 21, 'text-anchor': 'middle' }, 'Rule is applied'))
+
+  const finding = card(1000, 560, 'FINDING')
+  const gapG = el('g'), clearG = el('g'); finding.g.append(gapG, clearG)
+  gapG.append(el('text', { x: 1032, y: 178, fill: C.text, 'font-size': 36, 'font-weight': 700 }, 'Patches overdue'))
+  gapG.append(el('text', { x: 1032, y: 216, fill: C.amber, 'font-size': 21 }, 'Recorded gap'))
+  gapG.append(el('text', { x: 1032, y: 290, fill: C.text3, 'font-size': 19, class: 'mono' }, 'RECOMMENDED FOLLOW-UP'))
+  gapG.append(el('text', { x: 1032, y: 326, fill: C.text2, 'font-size': 21 }, 'Check for security updates, schedule'))
+  gapG.append(el('text', { x: 1032, y: 356, fill: C.text2, 'font-size': 21 }, 'installation, and verify the result.'))
+  clearG.append(el('text', { x: 1032, y: 178, fill: C.text, 'font-size': 36, 'font-weight': 700 }, 'No patch finding'))
+  clearG.append(el('text', { x: 1032, y: 216, fill: C.cyan, 'font-size': 21 }, 'Nothing flagged from this field'))
+  clearG.append(el('text', { x: 1032, y: 290, fill: C.text3, 'font-size': 19, class: 'mono' }, 'STILL TRUE'))
+  clearG.append(el('text', { x: 1032, y: 326, fill: C.text2, 'font-size': 21 }, 'The app displays the record. It does not'))
+  clearG.append(el('text', { x: 1032, y: 356, fill: C.text2, 'font-size': 21 }, 'check the device itself.'))
+
+  const labels = ['Recorded as overdue', 'Finding is generated', 'A person verifies', 'Record is updated', 'Finding clears']
+  const times = [.2, 1.5, 2.8, 4, 5.2]
+  labels.forEach((label, i) => {
+    const x = 40 + i * 304, g = el('g'); svg.append(g)
+    const bar = el('rect', { x, y: 452, width: 288, height: 4, rx: 2, fill: C.line }); g.append(bar)
+    g.append(el('text', { x, y: 492, fill: C.cyan, 'font-size': 18, class: 'mono' }, '0' + (i + 1)))
+    const text = el('text', { x: x + 36, y: 492, 'font-size': 21, fill: C.text3 }, label); g.append(text)
+    steps.push(t => { const p = ease((t - times[i]) / .5); bar.setAttribute('fill', mix(C.line, C.cyan, p)); text.setAttribute('fill', mix(C.text3, C.text, p)) })
+  })
+  steps.push(t => {
+    record.g.setAttribute('opacity', ease(t / .5))
+    const flip = ease((t - 4) / .6)
+    before.setAttribute('opacity', 1 - flip); after.setAttribute('opacity', flip)
+    chip.setAttribute('stroke', mix(C.amber, C.cyan, flip))
+    verify.setAttribute('opacity', ease((t - 2.8) / .5))
+    base.setAttribute('stroke-dashoffset', 1 - ease((t - .9) / .7))
+    rule.setAttribute('opacity', ease((t - 1.1) / .5))
+    const run = t < 3 ? (t - 1) / .8 : (t - 4.5) / .8
+    pulse.setAttribute('stroke-dashoffset', .18 - 1.18 * clamp(run)); pulse.setAttribute('opacity', run > 0 && run < 1 ? 1 : 0)
+    finding.g.setAttribute('opacity', ease((t - 1.5) / .5))
+    const clear = ease((t - 5.2) / .6)
+    gapG.setAttribute('opacity', 1 - clear); clearG.setAttribute('opacity', clear)
+    finding.rect.setAttribute('stroke', mix(C.amber, C.cyan, clear)); finding.rect.setAttribute('stroke-opacity', .7)
+  })
+  return 6.6
+}
+
+// The clip opens on the finished diagram, so the poster frame is complete in any player, then clears and builds.
+const hold = .5, clear = .4, build = scene === 'status' ? status() : trace()
+window.duration = hold + clear + build
+window.seek = t => {
+  const local = t < hold + clear ? build : t - hold - clear
+  steps.forEach(step => step(local))
+  const root = document.querySelector('svg')
+  root.style.opacity = t <= hold ? 1 : t < hold + clear ? 1 - (t - hold) / clear : Math.min(1, (t - hold - clear) / .25)
+}
+if (new URLSearchParams(location.search).has('play')) { const start = performance.now(); (function tick() { const t = (performance.now() - start) / 1000; seek(Math.min(t, duration)); if (t < duration) requestAnimationFrame(tick) })() } else seek(window.duration)
+</script>
+</body>
+</html>

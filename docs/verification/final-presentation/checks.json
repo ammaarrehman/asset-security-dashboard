@@ -1,0 +1,208 @@
+{
+  "branch": "release/audit-remediation",
+  "unchangedHead": "abca62d7446bf8902e38084721ca34d53704e70e",
+  "checks": {
+    "lint": "passed",
+    "unitTests": 49,
+    "unitTestFiles": 6,
+    "productionBuild": "passed",
+    "whitespace": "passed"
+  },
+  "presentation": {
+    "status": "passed",
+    "slides": 6,
+    "relationships": 63,
+    "notesMatchSlides": true,
+    "cueRowsMatch": 13,
+    "scriptCueRowsMatch": 13,
+    "drawingIdsUnique": true,
+    "embeddedVideoMatches": true,
+    "videoDurationSeconds": 73,
+    "estimatedPresentationSeconds": 209,
+    "guideSpeechMatches": true,
+    "scriptSpeechMatches": true,
+    "archiveUnchanged": true,
+    "videoSha256": "575d34297172b3f73e80b7376091cb58e18263927a34d6eb7f71466fbf8e5cad",
+    "deckSha256": "e72a26872dac9219960882ebc2937cd5d4c1669172dbd3ae66a1f12474c2cd6b"
+  },
+  "negativeConsistencyChecks": [
+    {
+      "case": "guide speech drift",
+      "rejected": true,
+      "reason": "Slide 2: guide speech differs"
+    },
+    {
+      "case": "natural script cue drift",
+      "rejected": true,
+      "reason": "Natural script cue table differs from demo-cues.json"
+    },
+    {
+      "case": "guide timing drift",
+      "rejected": true,
+      "reason": "Slide 1: guide timing differs"
+    }
+  ],
+  "renderChecks": {
+    "renderedQRDestination": "https://ammaarrehman.github.io/asset-security-dashboard/",
+    "pixelChecks": [
+      {
+        "slide": 1,
+        "changedPixels": 0
+      },
+      {
+        "slide": 2,
+        "changedPixels": 51921
+      },
+      {
+        "slide": 3,
+        "changedPixels": 21847
+      },
+      {
+        "slide": 4,
+        "changedPixels": 7554
+      },
+      {
+        "slide": 5,
+        "changedPixels": 25750
+      },
+      {
+        "slide": 6,
+        "changedPixels": 119219
+      }
+    ]
+  },
+  "preservation": {
+    "protectedFilesChecked": 238,
+    "changedProtectedFiles": [],
+    "nativeSlideGeometry": [
+      {
+        "slide": 1,
+        "allObjectTransformsUnchanged": true
+      },
+      {
+        "slide": 2,
+        "allObjectTransformsUnchanged": true
+      },
+      {
+        "slide": 3,
+        "allObjectTransformsUnchanged": true
+      },
+      {
+        "slide": 4,
+        "allObjectTransformsUnchanged": true
+      },
+      {
+        "slide": 5,
+        "allObjectTransformsUnchanged": true
+      },
+      {
+        "slide": 6,
+        "allObjectTransformsUnchanged": true
+      }
+    ],
+    "allEmbeddedPngImagesUnchanged": true,
+    "embeddedPngCount": 14
+  },
+  "pdf": {
+    "checks": [
+      {
+        "page": 1,
+        "updatedWordingPresent": true
+      },
+      {
+        "page": 2,
+        "updatedWordingPresent": true
+      },
+      {
+        "page": 3,
+        "updatedWordingPresent": true
+      },
+      {
+        "page": 4,
+        "updatedWordingPresent": true
+      },
+      {
+        "page": 5,
+        "updatedWordingPresent": true
+      },
+      {
+        "page": 6,
+        "updatedWordingPresent": true
+      }
+    ],
+    "pages": 6
+  },
+  "embeddedVideo": {
+    "audioTracks": 0,
+    "decoderCompleted": true,
+    "duration": 73,
+    "fps": 30,
+    "frames": 2190,
+    "height": 1080,
+    "nominalFrameRateEstimate": 29.877662658691406,
+    "timestampGridMismatches": 0,
+    "width": 1920
+  },
+  "videoCues": [
+    {
+      "check": "overdue",
+      "second": 19,
+      "passed": true,
+      "zeroAlsoVisuallyConfirmedInFrame1620": false
+    },
+    {
+      "check": "patchUpdated",
+      "second": 38,
+      "passed": true,
+      "zeroAlsoVisuallyConfirmedInFrame1620": false
+    },
+    {
+      "check": "saveButtonBeforeClick",
+      "second": 39,
+      "passed": true,
+      "zeroAlsoVisuallyConfirmedInFrame1620": false
+    },
+    {
+      "check": "healthy",
+      "second": 43,
+      "passed": true,
+      "zeroAlsoVisuallyConfirmedInFrame1620": false
+    },
+    {
+      "check": "zeroFindings",
+      "second": 54,
+      "passed": true,
+      "zeroAlsoVisuallyConfirmedInFrame1620": true
+    },
+    {
+      "check": "finalOverview",
+      "second": 65,
+      "passed": true,
+      "zeroAlsoVisuallyConfirmedInFrame1620": false
+    }
+  ],
+  "offlinePackage": {
+    "entries": 8,
+    "sizeBytes": 60715688,
+    "sha256": "b5d1a400814e28d1c2b2d4dd66721bf5494e52132216315691dfc229abc6fc77",
+    "sourceHashesMatchAfterUnpacking": true,
+    "relativeGuideLinksResolve": true,
+    "files": {
+      "Asset_Security_Dashboard_CRC_Capstone_v2.pptx": "e72a26872dac9219960882ebc2937cd5d4c1669172dbd3ae66a1f12474c2cd6b",
+      "Asset_Security_Dashboard_CRC_Capstone_v2.pdf": "a21e74b94ca3f74a5c0584055da4764c636579a6ac92461d4b0e835859ec516e",
+      "story-review/Demo_Recording_73s.mp4": "575d34297172b3f73e80b7376091cb58e18263927a34d6eb7f71466fbf8e5cad",
+      "story-review/Natural_Script.md": "0df4463069c42e3cbdd5004a6dc483918344b58d488c99802cffc5fa62f9b36e",
+      "Presenter_Guide_v2.md": "0367ee9b83a627a59fdb21e37db654d8ac7e0075a03dcc0b09cad9d0cb0b401c",
+      "Slides_Preview_v2.png": "83ab448975fc8caa075af85a4bdb7c9a3ed822c2b6cadaed3a71b24ad083cefa",
+      "Live_Demo_QR_v2.png": "1e7632e333b3f4d8c5800640143c0b3c474df2bdf7c0a918b27661d1f21bcc77",
+      "sample-assets.csv": "841da9d652b8fde523d70a9b007f893145e3ffb0e60674f688d489239430aaa6"
+    }
+  },
+  "archiveSha256": "1954b55777deb9dad3d5d8c9e5cade487e25cb2dc3285d0da51c60fa5bcacb11",
+  "manualChecks": {
+    "nativeSlideshowPlaybackVerified": false,
+    "windowsFontsVerified": false,
+    "projectorVerified": false,
+    "timedHumanRehearsalPerformed": false
+  }
+}

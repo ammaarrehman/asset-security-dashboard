@@ -1,4 +1,6 @@
-# Capstone presentation outline
+# Archived original capstone presentation outline
+
+This is the original 5:30 live-demo outline, retained for history. The current six-slide v2 plan is approximately **3:29 (estimate)**, including the embedded 73-second recording. Use the [final presenter guide](presentation/Presenter_Guide_v2.md), [natural script](presentation/story-review/Natural_Script.md), and [presentation kit](presentation/README.md) for the current talk.
 
 **Asset Security Dashboard · Cyber Ready Clinic · 5 minutes 30 seconds**
 

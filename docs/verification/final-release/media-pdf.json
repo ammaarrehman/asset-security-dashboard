@@ -1,0 +1,36 @@
+{
+  "audioTracks" : 0,
+  "decoderCompleted" : true,
+  "duration" : 73,
+  "frames" : 2190,
+  "height" : 1080,
+  "pdfPages" : 6,
+  "pdfWording" : [
+    {
+      "page" : 1,
+      "wordingVerified" : true
+    },
+    {
+      "page" : 2,
+      "wordingVerified" : true
+    },
+    {
+      "page" : 3,
+      "wordingVerified" : true
+    },
+    {
+      "page" : 4,
+      "wordingVerified" : true
+    },
+    {
+      "page" : 5,
+      "wordingVerified" : true
+    },
+    {
+      "page" : 6,
+      "wordingVerified" : true
+    }
+  ],
+  "timestampGridMismatches" : 0,
+  "width" : 1920
+}

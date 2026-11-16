@@ -14,7 +14,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "lint": "eslint .",
-    "qa:visual": "npm run build && node scripts/verify-browser.mjs --update-gallery"
+    "qa:visual": "npm run build && node scripts/verify-browser.mjs",
+    "qa:update-gallery": "npm run build && node scripts/verify-browser.mjs --update-gallery"
   },
   "dependencies": {
     "lucide-react": "1.54.0",

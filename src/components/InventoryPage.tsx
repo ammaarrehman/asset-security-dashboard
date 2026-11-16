@@ -1,7 +1,7 @@
-import { Download, ListFilter, Plus, Search, Upload } from 'lucide-react'
+import { Download, Plus, Search, Upload } from 'lucide-react'
 import { useState } from 'react'
 import { statusLabels } from '../security'
-import { AssetTable, EmptyState } from './Shared'
+import { AssetTable, EmptyState, statusIcons, TraceMark } from './Shared'
 import type { AssetView, StatusFilter } from './Shared'
 
 export function InventoryPage({ rows, status, onStatus, onAdd, onImport, onExport, onSelect }: {
@@ -31,8 +31,9 @@ export function InventoryPage({ rows, status, onStatus, onAdd, onImport, onExpor
   }
 
   return <>
+    <TraceMark current={[0, 1]} />
     <div className="page-header">
-      <div><span className="eyebrow">02 / Device records</span><h1 tabIndex={-1}>Inventory</h1><p>Manage devices, ownership, and recorded security controls.</p></div>
+      <div><h1 tabIndex={-1}>Inventory</h1><p>Manage devices, ownership, and recorded security controls.</p></div>
       <div className="button-group">
         <button className="button secondary" onClick={onImport}><Upload size={17} aria-hidden="true" /> Import CSV</button>
         <button className="button secondary" onClick={onExport} disabled={!rows.length}><Download size={17} aria-hidden="true" /> Export CSV</button>
@@ -47,15 +48,17 @@ export function InventoryPage({ rows, status, onStatus, onAdd, onImport, onExpor
             setPage(0)
           }} />
         </label>
-        <label className="input-icon filter-control"><span className="sr-only">Security status filter</span><ListFilter size={17} aria-hidden="true" />
-          <select value={status} onChange={(event) => {
-            onStatus(event.target.value as StatusFilter)
-            setPage(0)
-          }}>
-            <option value="all">All statuses</option>
-            {Object.entries(statusLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
-          </select>
-        </label>
+        <div className="segmented" role="group" aria-label="Security status filter">
+          {(['all', 'healthy', 'attention', 'unknown'] as const).map((value) => {
+            const Icon = value === 'all' ? undefined : statusIcons[value]
+            const total = value === 'all' ? rows.length : rows.filter((row) => row.status === value).length
+            return <button key={value} type="button" className={`segment ${value}`} aria-pressed={status === value}
+              onClick={() => { onStatus(value); setPage(0) }}>
+              {Icon && <Icon size={14} aria-hidden="true" />}{value === 'all' ? 'All' : statusLabels[value]}
+              <span className="segment-count">{total}</span>
+            </button>
+          })}
+        </div>
       </div>
       {matches.length ? <AssetTable rows={matches.slice(first, end)} onSelect={onSelect} /> :
         <EmptyState title={rows.length ? 'No matching devices' : 'No devices yet'}

@@ -1,0 +1,16 @@
+{
+  "comparedTrackedFilesWithCandidateExcludingProgress": 297,
+  "differentFiles": [],
+  "originalMp4Sha256": "1954b55777deb9dad3d5d8c9e5cade487e25cb2dc3285d0da51c60fa5bcacb11",
+  "approvedPptxSha256": "4aa9a4b5e55dfbae8691f4dfda5ebba743cdcc20c4349f30fc85b6e8fb8310d8",
+  "embeddedMp4Sha256": "1954b55777deb9dad3d5d8c9e5cade487e25cb2dc3285d0da51c60fa5bcacb11",
+  "relativeLinksChecked": 4,
+  "candidateStatus": "",
+  "checks": {
+    "lint": "passed",
+    "test": "49 passed",
+    "build": "passed"
+  },
+  "standaloneAlternateNativePowerPointPlaybackTested": false,
+  "humanTimedRehearsalPerformed": false
+}
