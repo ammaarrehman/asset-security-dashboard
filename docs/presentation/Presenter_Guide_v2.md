@@ -51,7 +51,7 @@ Speak comfortably and let the audience read the status changes. Do not add fille
 
 **Point at:** Point across the existing diagram as you explain the flow. “Security software” explains the word “protection” in the diagram.
 
-**If asked:** The rules are fixed. The same record gives the same result. Unknown remains something to follow up rather than a guess about the device.
+**If asked:** The rules are fixed. The same record evaluated on the same UTC date gives the same result. Unknown remains something to follow up rather than a guess about the device.
 
 ## Slide 4: Here’s an example (1:20 to 1:40)
 
@@ -98,7 +98,7 @@ The value changes at 0:37.800. Save completes at 0:41.867. Keep the real-world p
 
 **Point at:** Look at the audience for the closing sentence. Then say “Thank you.” The QR code stays available without adding another feature tour.
 
-**If asked:** The prototype does not scan devices, apply patches, verify controls, or prove compliance. The QR code opens the public learning demo, which may have the earlier app design until a separate publication is approved.
+**If asked:** The prototype does not scan devices, apply patches, verify controls, or prove compliance. The QR code opens the published redesigned [learning demo](https://ammaarrehman.github.io/asset-security-dashboard/).
 
 ## Glossary
 
@@ -118,13 +118,13 @@ The value changes at 0:37.800. Save completes at 0:41.867. Keep the real-world p
 ## Five likely questions
 
 **1. "Does it check the actual computers?"**
-"No. It only checks what people type in. Checking real devices would need software on every computer and special permissions. Having an organized list is the first step before any of that."
+"No. It evaluates recorded values rather than checking real devices. Real-device verification would need authorized device or management evidence. Keeping an inventory helps establish what needs to be checked."
 
 **2. "Was this used by a real organization?"**
 "No. It's a learning prototype, and every device in it is made up. It hasn't been used by any real organization."
 
 **3. "Where is the data stored?"**
-"Only in your own web browser. There's no server or login, and nothing is sent anywhere. That also means a team can't share one list yet."
+"Inventory records stay in LocalStorage in the current browser profile and site origin. The app has no login or inventory backend and does not upload those records. Loading the public site still requests static files from GitHub Pages. Team members do not share one inventory."
 
 **4. "Why show 'Unknown' instead of just leaving it blank?"**
 "Not knowing is a risk too. If you don't know whether a laptop has backups, you can't count on them. Showing Unknown tells someone to go check."
